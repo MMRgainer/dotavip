@@ -207,9 +207,19 @@ function setVisible(show) {
  * One persistent process → no per-tick spawn cost → no mouse lag.
  */
 function startFocusMonitor() {
-  const script = path.join(__dirname, 'focus_monitor.ps1');
+  // In production the PS1 is unpacked from asar → must use the .unpacked path.
+  // __dirname inside app.asar is a virtual path PowerShell cannot read.
+  const script = app.isPackaged
+    ? path.join(process.resourcesPath, 'app.asar.unpacked', 'electron', 'focus_monitor.ps1')
+    : path.join(__dirname, 'focus_monitor.ps1');
+
+  console.log('[focus] script path:', script);
+  console.log('[focus] exists:', fs.existsSync(script));
+
   focusProc = spawn('powershell', ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', script],
     { windowsHide: true });
+
+  focusProc.stderr.on('data', d => console.error('[focus stderr]', d.toString()));
 
   let buf = '';
   focusProc.stdout.on('data', chunk => {
@@ -223,7 +233,7 @@ function startFocusMonitor() {
     }
   });
 
-  focusProc.on('exit', () => { focusProc = null; });
+  focusProc.on('exit', (code) => { console.log('[focus] exited', code); focusProc = null; });
 }
 
 function createOverlayWindow() {
