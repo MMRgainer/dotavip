@@ -1,0 +1,30 @@
+# ── Screen capture ──────────────────────────────────────────────────────────────
+mss==9.0.2                  # fast cross-platform screen capture (primary)
+Pillow==10.4.0              # image I/O and basic manipulation
+
+# ── Computer vision ─────────────────────────────────────────────────────────────
+opencv-python==4.10.0.84    # template matching, contour detection, image processing
+numpy==1.26.4               # array operations (cv2 dependency)
+
+# ── OCR ─────────────────────────────────────────────────────────────────────────
+pytesseract==0.3.13         # Python wrapper for Tesseract OCR engine
+# NOTE: Tesseract binary must be installed separately.
+# Download from: https://github.com/UB-Mannheim/tesseract/wiki
+# Default install path: C:\Program Files\Tesseract-OCR\tesseract.exe
+
+# ── API server ───────────────────────────────────────────────────────────────────
+fastapi==0.115.5            # async REST + WebSocket server
+uvicorn[standard]==0.32.1   # ASGI server with WebSocket support
+websockets==13.1            # low-level WebSocket library used by uvicorn
+pydantic==2.10.3            # data validation and settings management
+
+# ── Input hooks ──────────────────────────────────────────────────────────────────
+mouse==0.7.1                # global mouse hook (close overlay menu on in-game click)
+
+# ── Config / utilities ───────────────────────────────────────────────────────────
+python-dotenv==1.0.1        # load .env files for local configuration
+pydantic-settings==2.6.1    # settings class backed by env vars / .env
+
+# ── Development / testing ────────────────────────────────────────────────────────
+pytest==8.3.4
+pytest-asyncio==0.24.0

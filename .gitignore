@@ -1,0 +1,28 @@
+# ── Python backend ────────────────────────────────────────────────────────────
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/dist_backend/
+backend/build_backend/
+backend/tesseract_bundle/
+backend/debug/
+*.pyc
+*.pyo
+
+# ── Frontend / Electron ───────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/release/
+
+# ── Compiled launcher ─────────────────────────────────────────────────────────
+DotaVIP.exe
+
+# ── User data / calibration (per-machine, not for git) ───────────────────────
+backend/assets/scoreboard_calibration.json
+
+# ── IDE / OS ──────────────────────────────────────────────────────────────────
+.claude/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log

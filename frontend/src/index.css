@@ -1,0 +1,16 @@
+/* Global reset. App-specific styles live in App.css and inline styles.
+   IMPORTANT: #root must be full-width with no margins/borders — the settings
+   window centers its content with flex, and any width cap here breaks it. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  min-height: 100%;
+}

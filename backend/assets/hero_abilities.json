@@ -1,0 +1,5634 @@
+{
+  "antimage": {
+    "display_name": "Anti-Mage",
+    "abilities": [
+      {
+        "name": "antimage_blink",
+        "display_name": "Blink",
+        "cooldowns": [
+          10.5,
+          9.0,
+          7.5,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "antimage_counterspell",
+        "display_name": "Counterspell",
+        "cooldowns": [
+          15.0,
+          11.0,
+          7.0,
+          3.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "antimage_mana_void",
+        "display_name": "Mana Void",
+        "cooldowns": [
+          100.0,
+          85.0,
+          70.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "axe": {
+    "display_name": "Axe",
+    "abilities": [
+      {
+        "name": "axe_berserkers_call",
+        "display_name": "Berserker's Call",
+        "cooldowns": [
+          18.0,
+          16.0,
+          14.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "axe_battle_hunger",
+        "display_name": "Battle Hunger",
+        "cooldowns": [
+          20.0,
+          15.0,
+          10.0,
+          5.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "axe_counter_helix",
+        "display_name": "Counter Helix",
+        "cooldowns": [
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "axe_culling_blade",
+        "display_name": "Culling Blade",
+        "cooldowns": [
+          80.0,
+          75.0,
+          70.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "bane": {
+    "display_name": "Bane",
+    "abilities": [
+      {
+        "name": "bane_enfeeble",
+        "display_name": "Enfeeble",
+        "cooldowns": [
+          22.0,
+          17.0,
+          12.0,
+          7.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "bane_brain_sap",
+        "display_name": "Brain Sap",
+        "cooldowns": [
+          17.0,
+          15.0,
+          13.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "bane_nightmare",
+        "display_name": "Nightmare",
+        "cooldowns": [
+          25.0,
+          22.0,
+          19.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "bane_fiends_grip",
+        "display_name": "Fiend's Grip",
+        "cooldowns": [
+          120.0,
+          110.0,
+          100.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "bloodseeker": {
+    "display_name": "Bloodseeker",
+    "abilities": [
+      {
+        "name": "bloodseeker_bloodrage",
+        "display_name": "Bloodrage",
+        "cooldowns": [
+          14.0,
+          12.0,
+          10.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "bloodseeker_blood_bath",
+        "display_name": "Blood Rite",
+        "cooldowns": [
+          15.0,
+          14.0,
+          13.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "bloodseeker_rupture",
+        "display_name": "Rupture",
+        "cooldowns": [
+          75.0,
+          70.0,
+          65.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "crystal_maiden": {
+    "display_name": "Crystal Maiden",
+    "abilities": [
+      {
+        "name": "crystal_maiden_crystal_nova",
+        "display_name": "Crystal Nova",
+        "cooldowns": [
+          11.0,
+          10.0,
+          9.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "crystal_maiden_frostbite",
+        "display_name": "Frostbite",
+        "cooldowns": [
+          9.0,
+          8.0,
+          7.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "crystal_maiden_freezing_field",
+        "display_name": "Freezing Field",
+        "cooldowns": [
+          100.0,
+          95.0,
+          90.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "drow_ranger": {
+    "display_name": "Drow Ranger",
+    "abilities": [
+      {
+        "name": "drow_ranger_wave_of_silence",
+        "display_name": "Gust",
+        "cooldowns": [
+          19.0,
+          17.0,
+          15.0,
+          13.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "drow_ranger_multishot",
+        "display_name": "Multishot",
+        "cooldowns": [
+          24.0,
+          21.0,
+          18.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "drow_ranger_glacier",
+        "display_name": "Glacier",
+        "cooldowns": [
+          25.0
+        ],
+        "max_level": 1
+      }
+    ]
+  },
+  "earthshaker": {
+    "display_name": "Earthshaker",
+    "abilities": [
+      {
+        "name": "earthshaker_fissure",
+        "display_name": "Fissure",
+        "cooldowns": [
+          18.0,
+          17.0,
+          16.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "earthshaker_enchant_totem",
+        "display_name": "Enchant Totem",
+        "cooldowns": [
+          5.0,
+          5.0,
+          5.0,
+          5.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "earthshaker_echo_slam",
+        "display_name": "Echo Slam",
+        "cooldowns": [
+          130.0,
+          120.0,
+          110.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "juggernaut": {
+    "display_name": "Juggernaut",
+    "abilities": [
+      {
+        "name": "juggernaut_blade_fury",
+        "display_name": "Blade Fury",
+        "cooldowns": [
+          36.0,
+          30.0,
+          24.0,
+          18.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "juggernaut_healing_ward",
+        "display_name": "Healing Ward",
+        "cooldowns": [
+          60.0,
+          60.0,
+          60.0,
+          60.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "juggernaut_swift_slash",
+        "display_name": "Swiftslash",
+        "cooldowns": [
+          25.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "juggernaut_omni_slash",
+        "display_name": "Omnislash",
+        "cooldowns": [
+          120.0,
+          120.0,
+          120.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "mirana": {
+    "display_name": "Mirana",
+    "abilities": [
+      {
+        "name": "mirana_starfall",
+        "display_name": "Starstorm",
+        "cooldowns": [
+          12.0,
+          12.0,
+          12.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "mirana_arrow",
+        "display_name": "Sacred Arrow",
+        "cooldowns": [
+          19.0,
+          18.0,
+          17.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "mirana_invis",
+        "display_name": "Moonlight Shadow",
+        "cooldowns": [
+          120.0,
+          110.0,
+          100.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "morphling": {
+    "display_name": "Morphling",
+    "abilities": [
+      {
+        "name": "morphling_waveform",
+        "display_name": "Waveform",
+        "cooldowns": [
+          21.0,
+          18.0,
+          15.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "morphling_adaptive_strike_agi",
+        "display_name": "Adaptive Strike",
+        "cooldowns": [
+          17.0,
+          14.0,
+          11.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "morphling_replicate",
+        "display_name": "Morph",
+        "cooldowns": [
+          140.0,
+          100.0,
+          60.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "nevermore": {
+    "display_name": "Shadow Fiend",
+    "abilities": [
+      {
+        "name": "nevermore_shadowraze1",
+        "display_name": "Shadowraze",
+        "cooldowns": [
+          9.0,
+          9.0,
+          9.0,
+          9.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "nevermore_shadowraze2",
+        "display_name": "Shadowraze",
+        "cooldowns": [
+          9.0,
+          9.0,
+          9.0,
+          9.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "nevermore_shadowraze3",
+        "display_name": "Shadowraze",
+        "cooldowns": [
+          9.0,
+          9.0,
+          9.0,
+          9.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "nevermore_frenzy",
+        "display_name": "Feast of Souls",
+        "cooldowns": [
+          21.0,
+          21.0,
+          21.0,
+          21.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "nevermore_requiem",
+        "display_name": "Requiem of Souls",
+        "cooldowns": [
+          120.0,
+          110.0,
+          100.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "phantom_lancer": {
+    "display_name": "Phantom Lancer",
+    "abilities": [
+      {
+        "name": "phantom_lancer_spirit_lance",
+        "display_name": "Spirit Lance",
+        "cooldowns": [
+          10.0,
+          9.0,
+          8.0,
+          7.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "phantom_lancer_doppelwalk",
+        "display_name": "Doppelganger",
+        "cooldowns": [
+          22.0,
+          18.0,
+          14.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "phantom_lancer_phantom_edge",
+        "display_name": "Phantom Rush",
+        "cooldowns": [
+          15.0,
+          11.0,
+          7.0,
+          3.0
+        ],
+        "max_level": 4
+      }
+    ]
+  },
+  "puck": {
+    "display_name": "Puck",
+    "abilities": [
+      {
+        "name": "puck_illusory_orb",
+        "display_name": "Illusory Orb",
+        "cooldowns": [
+          11.0,
+          10.0,
+          9.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "puck_waning_rift",
+        "display_name": "Waning Rift",
+        "cooldowns": [
+          16.0,
+          15.0,
+          14.0,
+          13.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "puck_phase_shift",
+        "display_name": "Phase Shift",
+        "cooldowns": [
+          8.0,
+          7.5,
+          7.0,
+          6.5
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "puck_dream_coil",
+        "display_name": "Dream Coil",
+        "cooldowns": [
+          75.0,
+          75.0,
+          75.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "pudge": {
+    "display_name": "Pudge",
+    "abilities": [
+      {
+        "name": "pudge_meat_hook",
+        "display_name": "Meat Hook",
+        "cooldowns": [
+          18.0,
+          16.0,
+          14.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "pudge_flesh_heap",
+        "display_name": "Meat Shield",
+        "cooldowns": [
+          20.0,
+          19.0,
+          18.0,
+          17.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "pudge_dismember",
+        "display_name": "Dismember",
+        "cooldowns": [
+          30.0,
+          25.0,
+          20.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "razor": {
+    "display_name": "Razor",
+    "abilities": [
+      {
+        "name": "razor_plasma_field",
+        "display_name": "Plasma Field",
+        "cooldowns": [
+          13.0,
+          12.0,
+          11.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "razor_static_link",
+        "display_name": "Static Link",
+        "cooldowns": [
+          44.0,
+          36.0,
+          28.0,
+          20.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "razor_eye_of_the_storm",
+        "display_name": "Eye of the Storm",
+        "cooldowns": [
+          80.0,
+          70.0,
+          60.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "sand_king": {
+    "display_name": "Sand King",
+    "abilities": [
+      {
+        "name": "sandking_burrowstrike",
+        "display_name": "Burrowstrike",
+        "cooldowns": [
+          14.0,
+          13.0,
+          12.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "sandking_sand_storm",
+        "display_name": "Sand Storm",
+        "cooldowns": [
+          40.0,
+          34.0,
+          28.0,
+          22.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "sandking_scorpion_strike",
+        "display_name": "Stinger",
+        "cooldowns": [
+          15.0,
+          12.0,
+          9.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "sandking_epicenter",
+        "display_name": "Epicenter",
+        "cooldowns": [
+          120.0,
+          110.0,
+          100.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "storm_spirit": {
+    "display_name": "Storm Spirit",
+    "abilities": [
+      {
+        "name": "storm_spirit_static_remnant",
+        "display_name": "Static Remnant",
+        "cooldowns": [
+          3.5,
+          3.5,
+          3.5,
+          3.5
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "storm_spirit_electric_vortex",
+        "display_name": "Electric Vortex",
+        "cooldowns": [
+          20.0,
+          18.0,
+          16.0,
+          14.0
+        ],
+        "max_level": 4
+      }
+    ]
+  },
+  "sven": {
+    "display_name": "Sven",
+    "abilities": [
+      {
+        "name": "sven_storm_bolt",
+        "display_name": "Storm Hammer",
+        "cooldowns": [
+          21.0,
+          18.0,
+          15.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "sven_warcry",
+        "display_name": "Warcry",
+        "cooldowns": [
+          36.0,
+          32.0,
+          28.0,
+          24.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "sven_gods_strength",
+        "display_name": "God's Strength",
+        "cooldowns": [
+          110.0,
+          105.0,
+          100.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "tiny": {
+    "display_name": "Tiny",
+    "abilities": [
+      {
+        "name": "tiny_avalanche",
+        "display_name": "Avalanche",
+        "cooldowns": [
+          23.0,
+          20.0,
+          17.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "tiny_toss",
+        "display_name": "Toss",
+        "cooldowns": [
+          20.0,
+          17.0,
+          14.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "tiny_tree_grab",
+        "display_name": "Tree Grab",
+        "cooldowns": [
+          15.0,
+          12.0,
+          9.0,
+          6.0
+        ],
+        "max_level": 4
+      }
+    ]
+  },
+  "vengefulspirit": {
+    "display_name": "Vengeful Spirit",
+    "abilities": [
+      {
+        "name": "vengefulspirit_magic_missile",
+        "display_name": "Magic Missile",
+        "cooldowns": [
+          14.0,
+          13.0,
+          12.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "vengefulspirit_wave_of_terror",
+        "display_name": "Wave of Terror",
+        "cooldowns": [
+          16.0,
+          14.0,
+          12.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "vengefulspirit_nether_swap",
+        "display_name": "Nether Swap",
+        "cooldowns": [
+          46.0,
+          38.0,
+          30.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "windrunner": {
+    "display_name": "Windranger",
+    "abilities": [
+      {
+        "name": "windrunner_shackleshot",
+        "display_name": "Shackleshot",
+        "cooldowns": [
+          16.0,
+          14.0,
+          12.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "windrunner_powershot",
+        "display_name": "Powershot",
+        "cooldowns": [
+          12.0,
+          11.0,
+          10.0,
+          9.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "windrunner_windrun",
+        "display_name": "Windrun",
+        "cooldowns": [
+          14.0,
+          13.0,
+          12.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "windrunner_focusfire",
+        "display_name": "Focus Fire",
+        "cooldowns": [
+          70.0,
+          50.0,
+          30.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "zuus": {
+    "display_name": "Zeus",
+    "abilities": [
+      {
+        "name": "zuus_arc_lightning",
+        "display_name": "Arc Lightning",
+        "cooldowns": [
+          1.6,
+          1.6,
+          1.6,
+          1.6
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "zuus_lightning_bolt",
+        "display_name": "Lightning Bolt",
+        "cooldowns": [
+          6.0,
+          6.0,
+          6.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "zuus_heavenly_jump",
+        "display_name": "Heavenly Jump",
+        "cooldowns": [
+          26.0,
+          22.0,
+          18.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "zuus_thundergods_wrath",
+        "display_name": "Thundergod's Wrath",
+        "cooldowns": [
+          130.0,
+          130.0,
+          130.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "kunkka": {
+    "display_name": "Kunkka",
+    "abilities": [
+      {
+        "name": "kunkka_torrent",
+        "display_name": "Torrent",
+        "cooldowns": [
+          16.0,
+          14.0,
+          12.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "kunkka_tidebringer",
+        "display_name": "Tidebringer",
+        "cooldowns": [
+          13.0,
+          10.0,
+          7.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "kunkka_x_marks_the_spot",
+        "display_name": "X Marks the Spot",
+        "cooldowns": [
+          24.0,
+          20.0,
+          16.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "kunkka_admirals_rum",
+        "display_name": "Admiral's Rum",
+        "cooldowns": [
+          60.5
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "kunkka_ghostship",
+        "display_name": "Ghostship",
+        "cooldowns": [
+          90.0,
+          80.0,
+          70.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "lina": {
+    "display_name": "Lina",
+    "abilities": [
+      {
+        "name": "lina_dragon_slave",
+        "display_name": "Dragon Slave",
+        "cooldowns": [
+          11.0,
+          10.0,
+          9.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "lina_light_strike_array",
+        "display_name": "Light Strike Array",
+        "cooldowns": [
+          13.0,
+          11.0,
+          9.0,
+          7.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "lina_flame_cloak",
+        "display_name": "Flame Cloak",
+        "cooldowns": [
+          25.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "lina_laguna_blade",
+        "display_name": "Laguna Blade",
+        "cooldowns": [
+          70.0,
+          60.0,
+          50.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "lion": {
+    "display_name": "Lion",
+    "abilities": [
+      {
+        "name": "lion_impale",
+        "display_name": "Earth Spike",
+        "cooldowns": [
+          14.0,
+          13.0,
+          12.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "lion_voodoo",
+        "display_name": "Hex",
+        "cooldowns": [
+          24.0,
+          20.0,
+          16.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "lion_mana_drain",
+        "display_name": "Mana Drain",
+        "cooldowns": [
+          15.0,
+          12.0,
+          9.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "lion_finger_of_death",
+        "display_name": "Finger of Death",
+        "cooldowns": [
+          110.0,
+          70.0,
+          30.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "shadow_shaman": {
+    "display_name": "Shadow Shaman",
+    "abilities": [
+      {
+        "name": "shadow_shaman_ether_shock",
+        "display_name": "Ether Shock",
+        "cooldowns": [
+          14.0,
+          12.0,
+          10.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "shadow_shaman_voodoo",
+        "display_name": "Hex",
+        "cooldowns": [
+          24.0,
+          20.0,
+          16.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "shadow_shaman_shackles",
+        "display_name": "Shackles",
+        "cooldowns": [
+          14.0,
+          13.0,
+          12.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "shadow_shaman_fowl_play",
+        "display_name": "Fowl Play",
+        "cooldowns": [
+          120.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "shadow_shaman_urnaconda",
+        "display_name": "Urnaconda",
+        "cooldowns": [
+          50.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "shadow_shaman_mass_serpent_ward",
+        "display_name": "Mass Serpent Ward",
+        "cooldowns": [
+          110.0,
+          105.0,
+          100.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "slardar": {
+    "display_name": "Slardar",
+    "abilities": [
+      {
+        "name": "slardar_sprint",
+        "display_name": "Guardian Sprint",
+        "cooldowns": [
+          29.0,
+          25.0,
+          21.0,
+          17.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "slardar_slithereen_crush",
+        "display_name": "Slithereen Crush",
+        "cooldowns": [
+          7.0,
+          7.0,
+          7.0,
+          7.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "slardar_amplify_damage",
+        "display_name": "Corrosive Haze",
+        "cooldowns": [
+          5.0,
+          5.0,
+          5.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "tidehunter": {
+    "display_name": "Tidehunter",
+    "abilities": [
+      {
+        "name": "tidehunter_gush",
+        "display_name": "Gush",
+        "cooldowns": [
+          12.0,
+          12.0,
+          12.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "tidehunter_kraken_shell",
+        "display_name": "Kraken Shell",
+        "cooldowns": [
+          30.0,
+          30.0,
+          30.0,
+          30.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "tidehunter_anchor_smash",
+        "display_name": "Anchor Smash",
+        "cooldowns": [
+          7.0,
+          6.0,
+          5.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "tidehunter_dead_in_the_water",
+        "display_name": "Dead in the Water",
+        "cooldowns": [
+          35.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "tidehunter_ravage",
+        "display_name": "Ravage",
+        "cooldowns": [
+          150.0,
+          145.0,
+          140.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "witch_doctor": {
+    "display_name": "Witch Doctor",
+    "abilities": [
+      {
+        "name": "witch_doctor_paralyzing_cask",
+        "display_name": "Paralyzing Cask",
+        "cooldowns": [
+          20.0,
+          18.0,
+          16.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "witch_doctor_maledict",
+        "display_name": "Maledict",
+        "cooldowns": [
+          30.0,
+          26.0,
+          22.0,
+          18.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "witch_doctor_death_ward",
+        "display_name": "Death Ward",
+        "cooldowns": [
+          100.0,
+          90.0,
+          80.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "lich": {
+    "display_name": "Lich",
+    "abilities": [
+      {
+        "name": "lich_frost_nova",
+        "display_name": "Frost Blast",
+        "cooldowns": [
+          7.0,
+          7.0,
+          7.0,
+          7.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "lich_frost_shield",
+        "display_name": "Frost Shield",
+        "cooldowns": [
+          30.0,
+          25.0,
+          20.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "lich_sinister_gaze",
+        "display_name": "Sinister Gaze",
+        "cooldowns": [
+          24.0,
+          22.0,
+          20.0,
+          18.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "lich_chain_frost",
+        "display_name": "Chain Frost",
+        "cooldowns": [
+          100.0,
+          80.0,
+          60.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "riki": {
+    "display_name": "Riki",
+    "abilities": [
+      {
+        "name": "riki_smoke_screen",
+        "display_name": "Smoke Screen",
+        "cooldowns": [
+          17.0,
+          15.0,
+          13.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "riki_blink_strike",
+        "display_name": "Blink Strike",
+        "cooldowns": [
+          13.0,
+          10.0,
+          7.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "riki_tricks_of_the_trade",
+        "display_name": "Tricks of the Trade",
+        "cooldowns": [
+          21.0,
+          18.0,
+          15.0,
+          12.0
+        ],
+        "max_level": 4
+      }
+    ]
+  },
+  "enigma": {
+    "display_name": "Enigma",
+    "abilities": [
+      {
+        "name": "enigma_malefice",
+        "display_name": "Malefice",
+        "cooldowns": [
+          20.0,
+          18.0,
+          16.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "enigma_demonic_conversion",
+        "display_name": "Demonic Summoning",
+        "cooldowns": [
+          40.0,
+          38.0,
+          36.0,
+          34.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "enigma_midnight_pulse",
+        "display_name": "Midnight Pulse",
+        "cooldowns": [
+          40.0,
+          35.0,
+          30.0,
+          25.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "enigma_black_hole",
+        "display_name": "Black Hole",
+        "cooldowns": [
+          180.0,
+          170.0,
+          160.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "tinker": {
+    "display_name": "Tinker",
+    "abilities": [
+      {
+        "name": "tinker_laser",
+        "display_name": "Laser",
+        "cooldowns": [
+          19.0,
+          18.0,
+          17.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "tinker_march_of_the_machines",
+        "display_name": "March of the Machines",
+        "cooldowns": [
+          35.0,
+          33.0,
+          31.0,
+          29.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "tinker_deploy_turrets",
+        "display_name": "Deploy Turrets",
+        "cooldowns": [
+          24.0,
+          22.0,
+          20.0,
+          18.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "tinker_keen_teleport",
+        "display_name": "Keen Conveyance",
+        "cooldowns": [
+          50.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "tinker_rearm",
+        "display_name": "Rearm",
+        "cooldowns": [
+          5.5,
+          5.0,
+          4.5
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "sniper": {
+    "display_name": "Sniper",
+    "abilities": [
+      {
+        "name": "sniper_take_aim",
+        "display_name": "Take Aim",
+        "cooldowns": [
+          20.0,
+          18.0,
+          16.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "sniper_concussive_grenade",
+        "display_name": "Concussive Grenade",
+        "cooldowns": [
+          10.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "sniper_assassinate",
+        "display_name": "Assassinate",
+        "cooldowns": [
+          20.0,
+          15.0,
+          10.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "necrolyte": {
+    "display_name": "Necrophos",
+    "abilities": [
+      {
+        "name": "necrolyte_death_pulse",
+        "display_name": "Death Pulse",
+        "cooldowns": [
+          8.0,
+          7.0,
+          6.0,
+          5.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "necrolyte_ghost_shroud",
+        "display_name": "Ghost Shroud",
+        "cooldowns": [
+          28.0,
+          24.0,
+          20.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "necrolyte_reapers_scythe",
+        "display_name": "Reaper's Scythe",
+        "cooldowns": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "warlock": {
+    "display_name": "Warlock",
+    "abilities": [
+      {
+        "name": "warlock_fatal_bonds",
+        "display_name": "Fatal Bonds",
+        "cooldowns": [
+          42.0,
+          34.0,
+          26.0,
+          18.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "warlock_shadow_word",
+        "display_name": "Shadow Word",
+        "cooldowns": [
+          15.0,
+          14.0,
+          13.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "warlock_upheaval",
+        "display_name": "Upheaval",
+        "cooldowns": [
+          60.0,
+          50.0,
+          40.0,
+          30.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "warlock_rain_of_chaos",
+        "display_name": "Chaotic Offering",
+        "cooldowns": [
+          165.0,
+          165.0,
+          165.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "beastmaster": {
+    "display_name": "Beastmaster",
+    "abilities": [
+      {
+        "name": "beastmaster_wild_axes",
+        "display_name": "Wild Axes",
+        "cooldowns": [
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "beastmaster_summon_razorback",
+        "display_name": "Summon Razorback",
+        "cooldowns": [
+          30.0,
+          30.0,
+          30.0,
+          30.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "beastmaster_summon_raptor",
+        "display_name": "Summon Raptors",
+        "cooldowns": [
+          30.0,
+          30.0,
+          30.0,
+          30.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "beastmaster_primal_roar",
+        "display_name": "Primal Roar",
+        "cooldowns": [
+          90.0,
+          75.0,
+          60.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "queenofpain": {
+    "display_name": "Queen of Pain",
+    "abilities": [
+      {
+        "name": "queenofpain_shadow_strike",
+        "display_name": "Shadow Strike",
+        "cooldowns": [
+          13.0,
+          10.0,
+          7.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "queenofpain_blink",
+        "display_name": "Blink",
+        "cooldowns": [
+          12.0,
+          10.0,
+          8.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "queenofpain_scream_of_pain",
+        "display_name": "Scream Of Pain",
+        "cooldowns": [
+          7.5,
+          7.0,
+          6.5,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "queenofpain_sonic_wave",
+        "display_name": "Sonic Wave",
+        "cooldowns": [
+          110.0,
+          95.0,
+          80.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "venomancer": {
+    "display_name": "Venomancer",
+    "abilities": [
+      {
+        "name": "venomancer_venomous_gale",
+        "display_name": "Venomous Gale",
+        "cooldowns": [
+          21.0,
+          20.0,
+          19.0,
+          18.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "venomancer_snakebite",
+        "display_name": "Snakebite",
+        "cooldowns": [
+          20.0,
+          18.0,
+          16.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "venomancer_plague_ward",
+        "display_name": "Plague Ward",
+        "cooldowns": [
+          5.0,
+          5.0,
+          5.0,
+          5.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "venomancer_noxious_plague",
+        "display_name": "Noxious Plague",
+        "cooldowns": [
+          100.0,
+          90.0,
+          80.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "faceless_void": {
+    "display_name": "Faceless Void",
+    "abilities": [
+      {
+        "name": "faceless_void_time_walk",
+        "display_name": "Time Walk",
+        "cooldowns": [
+          21.0,
+          16.0,
+          11.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "faceless_void_time_dilation",
+        "display_name": "Time Dilation",
+        "cooldowns": [
+          28.0,
+          24.0,
+          20.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "faceless_void_chronosphere",
+        "display_name": "Chronosphere",
+        "cooldowns": [
+          155.0,
+          145.0,
+          135.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "skeleton_king": {
+    "display_name": "Wraith King",
+    "abilities": [
+      {
+        "name": "skeleton_king_hellfire_blast",
+        "display_name": "Wraithfire Blast",
+        "cooldowns": [
+          14.0,
+          12.0,
+          10.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "skeleton_king_bone_guard",
+        "display_name": "Bone Guard",
+        "cooldowns": [
+          42.0,
+          42.0,
+          42.0,
+          42.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "skeleton_king_mortal_strike",
+        "display_name": "Mortal Strike",
+        "cooldowns": [
+          6.0,
+          5.5,
+          5.0,
+          4.5
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "skeleton_king_reincarnation",
+        "display_name": "Reincarnation",
+        "cooldowns": [
+          180.0,
+          150.0,
+          120.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "death_prophet": {
+    "display_name": "Death Prophet",
+    "abilities": [
+      {
+        "name": "death_prophet_carrion_swarm",
+        "display_name": "Crypt Swarm",
+        "cooldowns": [
+          9.0,
+          8.0,
+          7.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "death_prophet_silence",
+        "display_name": "Silence",
+        "cooldowns": [
+          15.0,
+          14.0,
+          13.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "death_prophet_exorcism",
+        "display_name": "Exorcism",
+        "cooldowns": [
+          150.0,
+          150.0,
+          150.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "phantom_assassin": {
+    "display_name": "Phantom Assassin",
+    "abilities": [
+      {
+        "name": "phantom_assassin_stifling_dagger",
+        "display_name": "Stifling Dagger",
+        "cooldowns": [
+          6.0,
+          6.0,
+          6.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "phantom_assassin_phantom_strike",
+        "display_name": "Phantom Strike",
+        "cooldowns": [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "phantom_assassin_blur",
+        "display_name": "Blur",
+        "cooldowns": [
+          45.0
+        ],
+        "max_level": 1
+      }
+    ]
+  },
+  "pugna": {
+    "display_name": "Pugna",
+    "abilities": [
+      {
+        "name": "pugna_nether_blast",
+        "display_name": "Nether Blast",
+        "cooldowns": [
+          5.0,
+          5.0,
+          5.0,
+          5.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "pugna_decrepify",
+        "display_name": "Decrepify",
+        "cooldowns": [
+          16.0,
+          13.0,
+          10.0,
+          7.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "pugna_nether_ward",
+        "display_name": "Nether Ward",
+        "cooldowns": [
+          40.0,
+          40.0,
+          40.0,
+          40.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "pugna_life_drain",
+        "display_name": "Life Drain",
+        "cooldowns": [
+          7.0,
+          7.0,
+          7.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "templar_assassin": {
+    "display_name": "Templar Assassin",
+    "abilities": [
+      {
+        "name": "templar_assassin_refraction",
+        "display_name": "Refraction",
+        "cooldowns": [
+          14.0,
+          14.0,
+          14.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "templar_assassin_meld",
+        "display_name": "Meld",
+        "cooldowns": [
+          11.0,
+          9.0,
+          7.0,
+          5.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "templar_assassin_trap",
+        "display_name": "Trap",
+        "cooldowns": [
+          0.5
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "templar_assassin_psionic_trap",
+        "display_name": "Psionic Trap",
+        "cooldowns": [
+          11.0,
+          8.0,
+          5.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "viper": {
+    "display_name": "Viper",
+    "abilities": [
+      {
+        "name": "viper_nethertoxin",
+        "display_name": "Nethertoxin",
+        "cooldowns": [
+          14.0,
+          14.0,
+          14.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "viper_nose_dive",
+        "display_name": "Nosedive",
+        "cooldowns": [
+          20.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "viper_viper_strike",
+        "display_name": "Viper Strike",
+        "cooldowns": [
+          50.0,
+          40.0,
+          30.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "luna": {
+    "display_name": "Luna",
+    "abilities": [
+      {
+        "name": "luna_lucent_beam",
+        "display_name": "Lucent Beam",
+        "cooldowns": [
+          9.0,
+          8.0,
+          7.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "luna_lunar_orbit",
+        "display_name": "Lunar Orbit",
+        "cooldowns": [
+          40.0,
+          35.0,
+          30.0,
+          25.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "luna_eclipse",
+        "display_name": "Eclipse",
+        "cooldowns": [
+          105.0,
+          105.0,
+          105.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "dragon_knight": {
+    "display_name": "Dragon Knight",
+    "abilities": [
+      {
+        "name": "dragon_knight_breathe_fire",
+        "display_name": "Breathe Fire",
+        "cooldowns": [
+          14.0,
+          13.0,
+          12.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "dragon_knight_dragon_tail",
+        "display_name": "Dragon Tail",
+        "cooldowns": [
+          16.0,
+          14.0,
+          12.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "dragon_knight_elder_dragon_form",
+        "display_name": "Elder Dragon Form",
+        "cooldowns": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "max_level": 4
+      }
+    ]
+  },
+  "dazzle": {
+    "display_name": "Dazzle",
+    "abilities": [
+      {
+        "name": "dazzle_poison_touch",
+        "display_name": "Poison Touch",
+        "cooldowns": [
+          24.0,
+          21.0,
+          18.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "dazzle_shallow_grave",
+        "display_name": "Shallow Grave",
+        "cooldowns": [
+          30.0,
+          26.0,
+          22.0,
+          18.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "dazzle_shadow_wave",
+        "display_name": "Shadow Wave",
+        "cooldowns": [
+          10.0,
+          9.0,
+          8.0,
+          7.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "dazzle_nothl_projection",
+        "display_name": "Nothl Projection",
+        "cooldowns": [
+          70.0,
+          60.0,
+          50.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "rattletrap": {
+    "display_name": "Clockwerk",
+    "abilities": [
+      {
+        "name": "rattletrap_battery_assault",
+        "display_name": "Battery Assault",
+        "cooldowns": [
+          24.0,
+          22.0,
+          20.0,
+          18.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "rattletrap_power_cogs",
+        "display_name": "Power Cogs",
+        "cooldowns": [
+          21.0,
+          19.0,
+          17.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "rattletrap_rocket_flare",
+        "display_name": "Rocket Flare",
+        "cooldowns": [
+          20.0,
+          18.0,
+          16.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "rattletrap_hookshot",
+        "display_name": "Hookshot",
+        "cooldowns": [
+          60.0,
+          45.0,
+          30.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "leshrac": {
+    "display_name": "Leshrac",
+    "abilities": [
+      {
+        "name": "leshrac_split_earth",
+        "display_name": "Split Earth",
+        "cooldowns": [
+          11.0,
+          11.0,
+          11.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "leshrac_diabolic_edict",
+        "display_name": "Diabolic Edict",
+        "cooldowns": [
+          22.0,
+          21.0,
+          20.0,
+          19.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "leshrac_lightning_storm",
+        "display_name": "Lightning Storm",
+        "cooldowns": [
+          4.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "leshrac_greater_lightning_storm",
+        "display_name": "Nihilism",
+        "cooldowns": [
+          25.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "leshrac_pulse_nova",
+        "display_name": "Pulse Nova",
+        "cooldowns": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "furion": {
+    "display_name": "Nature's Prophet",
+    "abilities": [
+      {
+        "name": "furion_sprout",
+        "display_name": "Sprout",
+        "cooldowns": [
+          14.0,
+          12.0,
+          10.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "furion_teleportation",
+        "display_name": "Teleportation",
+        "cooldowns": [
+          65.0,
+          50.0,
+          35.0,
+          20.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "furion_force_of_nature",
+        "display_name": "Nature's Call",
+        "cooldowns": [
+          45.0,
+          40.0,
+          35.0,
+          30.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "furion_curse_of_the_forest",
+        "display_name": "Curse of the Oldgrowth",
+        "cooldowns": [
+          18.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "furion_wrath_of_nature",
+        "display_name": "Wrath of Nature",
+        "cooldowns": [
+          85.0,
+          85.0,
+          85.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "life_stealer": {
+    "display_name": "Lifestealer",
+    "abilities": [
+      {
+        "name": "life_stealer_rage",
+        "display_name": "Rage",
+        "cooldowns": [
+          20.0,
+          19.0,
+          18.0,
+          17.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "life_stealer_open_wounds",
+        "display_name": "Open Wounds",
+        "cooldowns": [
+          30.0,
+          25.0,
+          20.0,
+          15.0,
+          15.0,
+          15.0,
+          15.0,
+          15.0
+        ],
+        "max_level": 8
+      },
+      {
+        "name": "life_stealer_infest",
+        "display_name": "Infest",
+        "cooldowns": [
+          80.0,
+          65.0,
+          50.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "dark_seer": {
+    "display_name": "Dark Seer",
+    "abilities": [
+      {
+        "name": "dark_seer_vacuum",
+        "display_name": "Vacuum",
+        "cooldowns": [
+          60.0,
+          50.0,
+          40.0,
+          30.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "dark_seer_ion_shell",
+        "display_name": "Ion Shell",
+        "cooldowns": [
+          9.0,
+          9.0,
+          9.0,
+          9.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "dark_seer_surge",
+        "display_name": "Surge",
+        "cooldowns": [
+          24.0,
+          19.0,
+          14.0,
+          9.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "dark_seer_wall_of_replica",
+        "display_name": "Wall of Replica",
+        "cooldowns": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "clinkz": {
+    "display_name": "Clinkz",
+    "abilities": [
+      {
+        "name": "clinkz_strafe",
+        "display_name": "Strafe",
+        "cooldowns": [
+          30.0,
+          25.0,
+          20.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "clinkz_burning_barrage",
+        "display_name": "Burning Barrage",
+        "cooldowns": [
+          17.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "clinkz_burning_army",
+        "display_name": "Burning Army",
+        "cooldowns": [
+          70.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "clinkz_wind_walk",
+        "display_name": "Skeleton Walk",
+        "cooldowns": [
+          24.0,
+          21.0,
+          18.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "omniknight": {
+    "display_name": "Omniknight",
+    "abilities": [
+      {
+        "name": "omniknight_purification",
+        "display_name": "Purification",
+        "cooldowns": [
+          15.0,
+          14.0,
+          13.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "omniknight_martyr",
+        "display_name": "Repel",
+        "cooldowns": [
+          40.0,
+          36.0,
+          32.0,
+          28.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "omniknight_hammer_of_purity",
+        "display_name": "Hammer of Purity",
+        "cooldowns": [
+          13.0,
+          10.0,
+          7.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "omniknight_guardian_angel",
+        "display_name": "Guardian Angel",
+        "cooldowns": [
+          100.0,
+          90.0,
+          80.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "enchantress": {
+    "display_name": "Enchantress",
+    "abilities": [
+      {
+        "name": "enchantress_impetus",
+        "display_name": "Impetus",
+        "cooldowns": [
+          6.0,
+          4.0,
+          2.0,
+          0.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "enchantress_enchant",
+        "display_name": "Enchant",
+        "cooldowns": [
+          30.0,
+          24.0,
+          18.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "enchantress_natures_attendants",
+        "display_name": "Nature's Attendants",
+        "cooldowns": [
+          35.0,
+          35.0,
+          35.0,
+          35.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "enchantress_little_friends",
+        "display_name": "Little Friends",
+        "cooldowns": [
+          20.0
+        ],
+        "max_level": 1
+      }
+    ]
+  },
+  "huskar": {
+    "display_name": "Huskar",
+    "abilities": [
+      {
+        "name": "huskar_inner_fire",
+        "display_name": "Inner Fire",
+        "cooldowns": [
+          17.0,
+          15.0,
+          13.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "huskar_life_break",
+        "display_name": "Life Break",
+        "cooldowns": [
+          16.0,
+          14.0,
+          12.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "night_stalker": {
+    "display_name": "Night Stalker",
+    "abilities": [
+      {
+        "name": "night_stalker_void",
+        "display_name": "Void",
+        "cooldowns": [
+          11.0,
+          10.0,
+          9.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "night_stalker_crippling_fear",
+        "display_name": "Crippling Fear",
+        "cooldowns": [
+          30.0,
+          25.0,
+          20.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "night_stalker_midnight_feast",
+        "display_name": "Midnight Feast",
+        "cooldowns": [
+          39.0,
+          36.0,
+          33.0,
+          30.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "night_stalker_darkness",
+        "display_name": "Dark Ascension",
+        "cooldowns": [
+          140.0,
+          135.0,
+          130.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "broodmother": {
+    "display_name": "Broodmother",
+    "abilities": [
+      {
+        "name": "broodmother_insatiable_hunger",
+        "display_name": "Insatiable Hunger",
+        "cooldowns": [
+          45.0,
+          40.0,
+          35.0,
+          30.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "broodmother_spawn_spiderlings",
+        "display_name": "Spawn Spiderlings",
+        "cooldowns": [
+          9.0,
+          8.0,
+          7.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "bounty_hunter": {
+    "display_name": "Bounty Hunter",
+    "abilities": [
+      {
+        "name": "bounty_hunter_shuriken_toss",
+        "display_name": "Shuriken Toss",
+        "cooldowns": [
+          5.0,
+          5.0,
+          5.0,
+          5.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "bounty_hunter_jinada",
+        "display_name": "Jinada",
+        "cooldowns": [
+          9.0,
+          7.0,
+          5.0,
+          3.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "bounty_hunter_wind_walk",
+        "display_name": "Shadow Walk",
+        "cooldowns": [
+          18.0,
+          17.0,
+          16.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "bounty_hunter_wind_walk_ally",
+        "display_name": "Friendly Shadow",
+        "cooldowns": [
+          15.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "bounty_hunter_track",
+        "display_name": "Track",
+        "cooldowns": [
+          6.0,
+          5.0,
+          4.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "weaver": {
+    "display_name": "Weaver",
+    "abilities": [
+      {
+        "name": "weaver_the_swarm",
+        "display_name": "The Swarm",
+        "cooldowns": [
+          44.0,
+          36.0,
+          28.0,
+          20.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "weaver_shukuchi",
+        "display_name": "Shukuchi",
+        "cooldowns": [
+          15.0,
+          12.0,
+          9.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "weaver_geminate_attack",
+        "display_name": "Geminate Attack",
+        "cooldowns": [
+          9.0,
+          7.0,
+          5.0,
+          3.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "weaver_time_lapse",
+        "display_name": "Time Lapse",
+        "cooldowns": [
+          70.0,
+          55.0,
+          40.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "jakiro": {
+    "display_name": "Jakiro",
+    "abilities": [
+      {
+        "name": "jakiro_dual_breath",
+        "display_name": "Dual Breath",
+        "cooldowns": [
+          10.0,
+          10.0,
+          10.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "jakiro_ice_path",
+        "display_name": "Ice Path",
+        "cooldowns": [
+          20.0,
+          17.0,
+          14.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "jakiro_liquid_fire",
+        "display_name": "Liquid Fire",
+        "cooldowns": [
+          13.0,
+          10.0,
+          7.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "jakiro_liquid_ice",
+        "display_name": "Liquid Frost",
+        "cooldowns": [
+          13.0,
+          10.0,
+          7.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "jakiro_macropyre",
+        "display_name": "Macropyre",
+        "cooldowns": [
+          90.0,
+          80.0,
+          70.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "batrider": {
+    "display_name": "Batrider",
+    "abilities": [
+      {
+        "name": "batrider_sticky_napalm",
+        "display_name": "Sticky Napalm",
+        "cooldowns": [
+          3.0,
+          3.0,
+          3.0,
+          3.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "batrider_flamebreak",
+        "display_name": "Flamebreak",
+        "cooldowns": [
+          22.0,
+          19.0,
+          16.0,
+          13.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "batrider_firefly",
+        "display_name": "Firefly",
+        "cooldowns": [
+          45.0,
+          40.0,
+          35.0,
+          30.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "batrider_flaming_lasso",
+        "display_name": "Flaming Lasso",
+        "cooldowns": [
+          90.0,
+          75.0,
+          60.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "chen": {
+    "display_name": "Chen",
+    "abilities": [
+      {
+        "name": "chen_penitence",
+        "display_name": "Penitence",
+        "cooldowns": [
+          20.0,
+          17.0,
+          14.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "chen_holy_persuasion",
+        "display_name": "Holy Persuasion",
+        "cooldowns": [
+          15.0,
+          15.0,
+          15.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "chen_zealot",
+        "display_name": "Zealot",
+        "cooldowns": [
+          10.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "chen_hand_of_god",
+        "display_name": "Hand of God",
+        "cooldowns": [
+          150.0,
+          130.0,
+          110.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "spectre": {
+    "display_name": "Spectre",
+    "abilities": [
+      {
+        "name": "spectre_spectral_dagger",
+        "display_name": "Spectral Dagger",
+        "cooldowns": [
+          22.0,
+          20.0,
+          18.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "spectre_shadow_step",
+        "display_name": "Shadow Step",
+        "cooldowns": [
+          24.0,
+          21.0,
+          18.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "spectre_reality",
+        "display_name": "Reality",
+        "cooldowns": [
+          1.5
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "spectre_haunt",
+        "display_name": "Haunt",
+        "cooldowns": [
+          160.0,
+          150.0,
+          140.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "ancient_apparition": {
+    "display_name": "Ancient Apparition",
+    "abilities": [
+      {
+        "name": "ancient_apparition_cold_feet",
+        "display_name": "Cold Feet",
+        "cooldowns": [
+          15.0,
+          13.0,
+          11.0,
+          9.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "ancient_apparition_ice_vortex",
+        "display_name": "Ice Vortex",
+        "cooldowns": [
+          10.0,
+          8.0,
+          6.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "ancient_apparition_chilling_touch",
+        "display_name": "Chilling Touch",
+        "cooldowns": [
+          12.0,
+          9.0,
+          6.0,
+          3.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "ancient_apparition_ice_blast",
+        "display_name": "Ice Blast",
+        "cooldowns": [
+          60.0,
+          50.0,
+          40.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "doom_bringer": {
+    "display_name": "Doom",
+    "abilities": [
+      {
+        "name": "doom_bringer_devour",
+        "display_name": "Devour",
+        "cooldowns": [
+          66.0,
+          66.0,
+          66.0,
+          66.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "doom_bringer_scorched_earth",
+        "display_name": "Scorched Earth",
+        "cooldowns": [
+          41.0,
+          39.0,
+          37.0,
+          35.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "doom_bringer_infernal_blade",
+        "display_name": "Infernal Blade",
+        "cooldowns": [
+          13.0,
+          10.0,
+          7.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "doom_bringer_doom",
+        "display_name": "Doom",
+        "cooldowns": [
+          140.0,
+          130.0,
+          120.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "ursa": {
+    "display_name": "Ursa",
+    "abilities": [
+      {
+        "name": "ursa_earthshock",
+        "display_name": "Earthshock",
+        "cooldowns": [
+          15.0,
+          13.0,
+          11.0,
+          9.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "ursa_overpower",
+        "display_name": "Overpower",
+        "cooldowns": [
+          12.0,
+          11.0,
+          10.0,
+          9.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "ursa_enrage",
+        "display_name": "Enrage",
+        "cooldowns": [
+          60.0,
+          45.0,
+          30.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "spirit_breaker": {
+    "display_name": "Spirit Breaker",
+    "abilities": [
+      {
+        "name": "spirit_breaker_charge_of_darkness",
+        "display_name": "Charge of Darkness",
+        "cooldowns": [
+          22.0,
+          19.0,
+          16.0,
+          13.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "spirit_breaker_bulldoze",
+        "display_name": "Bulldoze",
+        "cooldowns": [
+          22.0,
+          20.0,
+          18.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "spirit_breaker_greater_bash",
+        "display_name": "Greater Bash",
+        "cooldowns": [
+          1.2,
+          1.2,
+          1.2,
+          1.2
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "spirit_breaker_planar_pocket",
+        "display_name": "Planar Pocket",
+        "cooldowns": [
+          30.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "spirit_breaker_nether_strike",
+        "display_name": "Nether Strike",
+        "cooldowns": [
+          75.0,
+          55.0,
+          35.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "gyrocopter": {
+    "display_name": "Gyrocopter",
+    "abilities": [
+      {
+        "name": "gyrocopter_rocket_barrage",
+        "display_name": "Rocket Barrage",
+        "cooldowns": [
+          7.0,
+          6.5,
+          6.0,
+          5.5
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "gyrocopter_homing_missile",
+        "display_name": "Homing Missile",
+        "cooldowns": [
+          30.0,
+          24.0,
+          18.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "gyrocopter_flak_cannon",
+        "display_name": "Flak Cannon",
+        "cooldowns": [
+          26.0,
+          24.0,
+          22.0,
+          20.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "gyrocopter_call_down",
+        "display_name": "Call Down",
+        "cooldowns": [
+          90.0,
+          75.0,
+          60.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "alchemist": {
+    "display_name": "Alchemist",
+    "abilities": [
+      {
+        "name": "alchemist_acid_spray",
+        "display_name": "Acid Spray",
+        "cooldowns": [
+          22.0,
+          21.0,
+          20.0,
+          19.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "alchemist_unstable_concoction",
+        "display_name": "Unstable Concoction",
+        "cooldowns": [
+          17.0,
+          17.0,
+          17.0,
+          17.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "alchemist_chemical_rage",
+        "display_name": "Chemical Rage",
+        "cooldowns": [
+          60.0,
+          60.0,
+          60.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "invoker": {
+    "display_name": "Invoker",
+    "abilities": [
+      {
+        "name": "invoker_invoke",
+        "display_name": "Invoke",
+        "cooldowns": [
+          7.0
+        ],
+        "max_level": 1
+      }
+    ]
+  },
+  "silencer": {
+    "display_name": "Silencer",
+    "abilities": [
+      {
+        "name": "silencer_curse_of_the_silent",
+        "display_name": "Arcane Curse",
+        "cooldowns": [
+          22.0,
+          20.0,
+          18.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "silencer_last_word",
+        "display_name": "Last Word",
+        "cooldowns": [
+          22.0,
+          18.0,
+          14.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "silencer_global_silence",
+        "display_name": "Global Silence",
+        "cooldowns": [
+          120.0,
+          120.0,
+          120.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "obsidian_destroyer": {
+    "display_name": "Outworld Destroyer",
+    "abilities": [
+      {
+        "name": "obsidian_destroyer_arcane_orb",
+        "display_name": "Arcane Orb",
+        "cooldowns": [
+          4.5,
+          3.0,
+          1.5,
+          0.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "obsidian_destroyer_astral_imprisonment",
+        "display_name": "Astral Imprisonment",
+        "cooldowns": [
+          18.0,
+          16.0,
+          14.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "obsidian_destroyer_objurgation",
+        "display_name": "Objurgation",
+        "cooldowns": [
+          36.0,
+          34.0,
+          32.0,
+          30.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "obsidian_destroyer_sanity_eclipse",
+        "display_name": "Sanity's Eclipse",
+        "cooldowns": [
+          140.0,
+          130.0,
+          120.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "lycan": {
+    "display_name": "Lycan",
+    "abilities": [
+      {
+        "name": "lycan_summon_wolves",
+        "display_name": "Summon Wolves",
+        "cooldowns": [
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0,
+          30.0
+        ],
+        "max_level": 6
+      },
+      {
+        "name": "lycan_howl",
+        "display_name": "Howl",
+        "cooldowns": [
+          22.0,
+          20.0,
+          18.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "lycan_shapeshift",
+        "display_name": "Shapeshift",
+        "cooldowns": [
+          110.0,
+          100.0,
+          90.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "brewmaster": {
+    "display_name": "Brewmaster",
+    "abilities": [
+      {
+        "name": "brewmaster_thunder_clap",
+        "display_name": "Thunder Clap",
+        "cooldowns": [
+          18.0,
+          16.0,
+          14.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "brewmaster_cinder_brew",
+        "display_name": "Cinder Brew",
+        "cooldowns": [
+          19.0,
+          17.0,
+          15.0,
+          13.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "brewmaster_primal_split",
+        "display_name": "Primal Split",
+        "cooldowns": [
+          140.0,
+          130.0,
+          120.0,
+          120.0
+        ],
+        "max_level": 4
+      }
+    ]
+  },
+  "shadow_demon": {
+    "display_name": "Shadow Demon",
+    "abilities": [
+      {
+        "name": "shadow_demon_disruption",
+        "display_name": "Disruption",
+        "cooldowns": [
+          26.0,
+          24.0,
+          22.0,
+          20.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "shadow_demon_disseminate",
+        "display_name": "Disseminate",
+        "cooldowns": [
+          26.0,
+          22.0,
+          18.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "shadow_demon_shadow_poison",
+        "display_name": "Shadow Poison",
+        "cooldowns": [
+          2.5,
+          2.5,
+          2.5,
+          2.5
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "shadow_demon_shadow_poison_release",
+        "display_name": "Shadow Poison Release",
+        "cooldowns": [
+          1.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "shadow_demon_demonic_cleanse",
+        "display_name": "Demonic Cleanse",
+        "cooldowns": [
+          60.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "shadow_demon_demonic_purge",
+        "display_name": "Demonic Purge",
+        "cooldowns": [
+          70.0,
+          65.0,
+          60.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "lone_druid": {
+    "display_name": "Lone Druid",
+    "abilities": [
+      {
+        "name": "lone_druid_entangle",
+        "display_name": "Entangle",
+        "cooldowns": [
+          20.0,
+          19.0,
+          18.0,
+          17.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "lone_druid_savage_roar",
+        "display_name": "Savage Roar",
+        "cooldowns": [
+          29.0,
+          26.0,
+          23.0,
+          20.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "lone_druid_spirit_bear",
+        "display_name": "Summon Spirit Bear",
+        "cooldowns": [
+          120.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "lone_druid_true_form",
+        "display_name": "True Form",
+        "cooldowns": [
+          60.0,
+          55.0,
+          50.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "chaos_knight": {
+    "display_name": "Chaos Knight",
+    "abilities": [
+      {
+        "name": "chaos_knight_chaos_bolt",
+        "display_name": "Chaos Bolt",
+        "cooldowns": [
+          13.0,
+          12.0,
+          11.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "chaos_knight_reality_rift",
+        "display_name": "Reality Rift",
+        "cooldowns": [
+          15.0,
+          12.0,
+          9.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "chaos_knight_phantasm",
+        "display_name": "Phantasm",
+        "cooldowns": [
+          75.0,
+          75.0,
+          75.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "meepo": {
+    "display_name": "Meepo",
+    "abilities": [
+      {
+        "name": "meepo_earthbind",
+        "display_name": "Earthbind",
+        "cooldowns": [
+          16.0,
+          14.0,
+          12.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "meepo_poof",
+        "display_name": "Poof",
+        "cooldowns": [
+          12.0,
+          10.0,
+          8.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "meepo_megameepo",
+        "display_name": "MegaMeepo",
+        "cooldowns": [
+          60.0
+        ],
+        "max_level": 1
+      }
+    ]
+  },
+  "treant": {
+    "display_name": "Treant Protector",
+    "abilities": [
+      {
+        "name": "treant_natures_grasp",
+        "display_name": "Nature's Grasp",
+        "cooldowns": [
+          20.0,
+          19.0,
+          18.0,
+          17.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "treant_leech_seed",
+        "display_name": "Leech Seed",
+        "cooldowns": [
+          15.0,
+          12.0,
+          9.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "treant_living_armor",
+        "display_name": "Living Armor",
+        "cooldowns": [
+          24.0,
+          21.0,
+          18.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "treant_natures_guise",
+        "display_name": "Nature's Guise",
+        "cooldowns": [
+          36.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "treant_overgrowth",
+        "display_name": "Overgrowth",
+        "cooldowns": [
+          110.0,
+          100.0,
+          90.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "ogre_magi": {
+    "display_name": "Ogre Magi",
+    "abilities": [
+      {
+        "name": "ogre_magi_fireblast",
+        "display_name": "Fireblast",
+        "cooldowns": [
+          11.0,
+          10.0,
+          9.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "ogre_magi_ignite",
+        "display_name": "Ignite",
+        "cooldowns": [
+          17.0,
+          17.0,
+          17.0,
+          17.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "ogre_magi_bloodlust",
+        "display_name": "Bloodlust",
+        "cooldowns": [
+          20.0,
+          18.0,
+          16.0,
+          14.0
+        ],
+        "max_level": 4
+      }
+    ]
+  },
+  "undying": {
+    "display_name": "Undying",
+    "abilities": [
+      {
+        "name": "undying_decay",
+        "display_name": "Decay",
+        "cooldowns": [
+          13.0,
+          10.0,
+          7.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "undying_soul_rip",
+        "display_name": "Soul Rip",
+        "cooldowns": [
+          15.0,
+          12.0,
+          9.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "undying_tombstone",
+        "display_name": "Tombstone",
+        "cooldowns": [
+          80.0,
+          80.0,
+          80.0,
+          80.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "undying_ceaseless_dirge",
+        "display_name": "Ceaseless Dirge",
+        "cooldowns": [
+          480.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "undying_flesh_golem",
+        "display_name": "Flesh Golem",
+        "cooldowns": [
+          140.0,
+          140.0,
+          140.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "rubick": {
+    "display_name": "Rubick",
+    "abilities": [
+      {
+        "name": "rubick_telekinesis",
+        "display_name": "Telekinesis",
+        "cooldowns": [
+          22.0,
+          19.0,
+          16.0,
+          13.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "rubick_fade_bolt",
+        "display_name": "Fade Bolt",
+        "cooldowns": [
+          16.0,
+          14.0,
+          12.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "rubick_spell_steal",
+        "display_name": "Spell Steal",
+        "cooldowns": [
+          16.0,
+          10.0,
+          4.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "disruptor": {
+    "display_name": "Disruptor",
+    "abilities": [
+      {
+        "name": "disruptor_thunder_strike",
+        "display_name": "Thunder Strike",
+        "cooldowns": [
+          18.0,
+          15.0,
+          12.0,
+          9.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "disruptor_glimpse",
+        "display_name": "Glimpse",
+        "cooldowns": [
+          24.0,
+          22.0,
+          20.0,
+          18.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "disruptor_kinetic_field",
+        "display_name": "Kinetic Field",
+        "cooldowns": [
+          20.0,
+          18.0,
+          16.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "disruptor_electromagnetic_repulsion",
+        "display_name": "Electromagnetic Repulsion",
+        "cooldowns": [
+          5.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "disruptor_static_storm",
+        "display_name": "Static Storm",
+        "cooldowns": [
+          100.0,
+          85.0,
+          70.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "nyx_assassin": {
+    "display_name": "Nyx Assassin",
+    "abilities": [
+      {
+        "name": "nyx_assassin_impale",
+        "display_name": "Impale",
+        "cooldowns": [
+          17.0,
+          15.0,
+          13.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "nyx_assassin_jolt",
+        "display_name": "Mind Flare",
+        "cooldowns": [
+          11.0,
+          9.5,
+          8.0,
+          6.5
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "nyx_assassin_spiked_carapace",
+        "display_name": "Spiked Carapace",
+        "cooldowns": [
+          20.0,
+          16.0,
+          12.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "nyx_assassin_vendetta",
+        "display_name": "Vendetta",
+        "cooldowns": [
+          80.0,
+          70.0,
+          60.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "naga_siren": {
+    "display_name": "Naga Siren",
+    "abilities": [
+      {
+        "name": "naga_siren_mirror_image",
+        "display_name": "Mirror Image",
+        "cooldowns": [
+          40.0,
+          35.0,
+          30.0,
+          25.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "naga_siren_ensnare",
+        "display_name": "Ensnare",
+        "cooldowns": [
+          21.0,
+          18.0,
+          15.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "naga_siren_reel_in",
+        "display_name": "Reel In",
+        "cooldowns": [
+          8.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "naga_siren_song_of_the_siren",
+        "display_name": "Song of the Siren",
+        "cooldowns": [
+          160.0,
+          130.0,
+          100.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "keeper_of_the_light": {
+    "display_name": "Keeper of the Light",
+    "abilities": [
+      {
+        "name": "keeper_of_the_light_illuminate",
+        "display_name": "Illuminate",
+        "cooldowns": [
+          13.0,
+          13.0,
+          13.0,
+          13.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "keeper_of_the_light_blinding_light",
+        "display_name": "Blinding Light",
+        "cooldowns": [
+          24.0,
+          21.0,
+          18.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "keeper_of_the_light_chakra_magic",
+        "display_name": "Chakra Magic",
+        "cooldowns": [
+          19.0,
+          16.0,
+          13.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "keeper_of_the_light_spirit_form",
+        "display_name": "Spirit Form",
+        "cooldowns": [
+          85.0,
+          80.0,
+          75.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "wisp": {
+    "display_name": "Io",
+    "abilities": [
+      {
+        "name": "wisp_tether",
+        "display_name": "Tether",
+        "cooldowns": [
+          12.0,
+          12.0,
+          12.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "wisp_spirits",
+        "display_name": "Spirits",
+        "cooldowns": [
+          15.0,
+          15.0,
+          15.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "wisp_overcharge",
+        "display_name": "Overcharge",
+        "cooldowns": [
+          25.0,
+          22.0,
+          19.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "wisp_relocate",
+        "display_name": "Relocate",
+        "cooldowns": [
+          90.0,
+          80.0,
+          70.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "visage": {
+    "display_name": "Visage",
+    "abilities": [
+      {
+        "name": "visage_grave_chill",
+        "display_name": "Grave Chill",
+        "cooldowns": [
+          17.0,
+          15.0,
+          13.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "visage_soul_assumption",
+        "display_name": "Soul Assumption",
+        "cooldowns": [
+          4.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "visage_silent_as_the_grave",
+        "display_name": "Silent as the Grave",
+        "cooldowns": [
+          45.75
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "visage_summon_familiars",
+        "display_name": "Summon Familiars",
+        "cooldowns": [
+          120.0,
+          110.0,
+          100.0
+        ],
+        "max_level": 3
+      },
+      {
+        "name": "visage_summon_familiars_stone_form",
+        "display_name": "Stone Form",
+        "cooldowns": [
+          11.0,
+          11.0,
+          11.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "slark": {
+    "display_name": "Slark",
+    "abilities": [
+      {
+        "name": "slark_dark_pact",
+        "display_name": "Dark Pact",
+        "cooldowns": [
+          9.0,
+          8.0,
+          7.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "slark_pounce",
+        "display_name": "Pounce",
+        "cooldowns": [
+          24.0,
+          20.0,
+          16.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "slark_saltwater_shiv",
+        "display_name": "Saltwater Shiv",
+        "cooldowns": [
+          14.0,
+          12.0,
+          10.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "slark_shadow_dance",
+        "display_name": "Shadow Dance",
+        "cooldowns": [
+          50.0,
+          40.0,
+          30.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "medusa": {
+    "display_name": "Medusa",
+    "abilities": [
+      {
+        "name": "medusa_mystic_snake",
+        "display_name": "Mystic Snake",
+        "cooldowns": [
+          15.0,
+          14.0,
+          13.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "medusa_gorgon_grasp",
+        "display_name": "Gorgon's Grasp",
+        "cooldowns": [
+          30.0,
+          26.0,
+          22.0,
+          18.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "medusa_stone_gaze",
+        "display_name": "Stone Gaze",
+        "cooldowns": [
+          90.0,
+          90.0,
+          90.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "troll_warlord": {
+    "display_name": "Troll Warlord",
+    "abilities": [
+      {
+        "name": "troll_warlord_whirling_axes_ranged",
+        "display_name": "Whirling Axes (Ranged)",
+        "cooldowns": [
+          9.0,
+          9.0,
+          9.0,
+          9.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "troll_warlord_whirling_axes_melee",
+        "display_name": "Whirling Axes (Melee)",
+        "cooldowns": [
+          9.0,
+          9.0,
+          9.0,
+          9.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "troll_warlord_battle_trance",
+        "display_name": "Battle Trance",
+        "cooldowns": [
+          90.0,
+          80.0,
+          70.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "centaur": {
+    "display_name": "Centaur Warrunner",
+    "abilities": [
+      {
+        "name": "centaur_hoof_stomp",
+        "display_name": "Hoof Stomp",
+        "cooldowns": [
+          18.0,
+          16.0,
+          14.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "centaur_double_edge",
+        "display_name": "Double Edge",
+        "cooldowns": [
+          3.5,
+          3.5,
+          3.5,
+          3.5
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "centaur_work_horse",
+        "display_name": "Work Horse",
+        "cooldowns": [
+          35.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "centaur_stampede",
+        "display_name": "Stampede",
+        "cooldowns": [
+          100.0,
+          95.0,
+          90.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "magnataur": {
+    "display_name": "Magnus",
+    "abilities": [
+      {
+        "name": "magnataur_shockwave",
+        "display_name": "Shockwave",
+        "cooldowns": [
+          13.0,
+          12.0,
+          11.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "magnataur_empower",
+        "display_name": "Empower",
+        "cooldowns": [
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "magnataur_skewer",
+        "display_name": "Skewer",
+        "cooldowns": [
+          22.0,
+          20.0,
+          18.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "magnataur_reverse_polarity",
+        "display_name": "Reverse Polarity",
+        "cooldowns": [
+          115.0,
+          115.0,
+          115.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "shredder": {
+    "display_name": "Timbersaw",
+    "abilities": [
+      {
+        "name": "shredder_whirling_death",
+        "display_name": "Whirling Death",
+        "cooldowns": [
+          7.5,
+          7.0,
+          6.5,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "shredder_timber_chain",
+        "display_name": "Timber Chain",
+        "cooldowns": [
+          4.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "shredder_chakram",
+        "display_name": "Chakram",
+        "cooldowns": [
+          8.0,
+          8.0,
+          8.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "bristleback": {
+    "display_name": "Bristleback",
+    "abilities": [
+      {
+        "name": "bristleback_viscous_nasal_goo",
+        "display_name": "Viscous Nasal Goo",
+        "cooldowns": [
+          1.75,
+          1.75,
+          1.75,
+          1.75
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "bristleback_quill_spray",
+        "display_name": "Quill Spray",
+        "cooldowns": [
+          3.0,
+          3.0,
+          3.0,
+          3.0
+        ],
+        "max_level": 4
+      }
+    ]
+  },
+  "tusk": {
+    "display_name": "Tusk",
+    "abilities": [
+      {
+        "name": "tusk_ice_shards",
+        "display_name": "Ice Shards",
+        "cooldowns": [
+          23.0,
+          20.0,
+          17.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "tusk_snowball",
+        "display_name": "Snowball",
+        "cooldowns": [
+          21.0,
+          19.0,
+          17.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "tusk_tag_team",
+        "display_name": "Tag Team",
+        "cooldowns": [
+          24.0,
+          21.0,
+          18.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "tusk_drinking_buddies",
+        "display_name": "Drinking Buddies",
+        "cooldowns": [
+          14.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "tusk_walrus_punch",
+        "display_name": "Walrus PUNCH!",
+        "cooldowns": [
+          16.0,
+          13.0,
+          10.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "skywrath_mage": {
+    "display_name": "Skywrath Mage",
+    "abilities": [
+      {
+        "name": "skywrath_mage_arcane_bolt",
+        "display_name": "Arcane Bolt",
+        "cooldowns": [
+          5.0,
+          4.0,
+          3.0,
+          2.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "skywrath_mage_concussive_shot",
+        "display_name": "Concussive Shot",
+        "cooldowns": [
+          15.0,
+          14.0,
+          13.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "skywrath_mage_ancient_seal",
+        "display_name": "Ancient Seal",
+        "cooldowns": [
+          14.0,
+          14.0,
+          14.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "skywrath_mage_mystic_flare",
+        "display_name": "Mystic Flare",
+        "cooldowns": [
+          60.0,
+          40.0,
+          20.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "abaddon": {
+    "display_name": "Abaddon",
+    "abilities": [
+      {
+        "name": "abaddon_death_coil",
+        "display_name": "Mist Coil",
+        "cooldowns": [
+          8.0,
+          7.0,
+          6.0,
+          5.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "abaddon_aphotic_shield",
+        "display_name": "Aphotic Shield",
+        "cooldowns": [
+          12.0,
+          10.0,
+          8.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "abaddon_borrowed_time",
+        "display_name": "Borrowed Time",
+        "cooldowns": [
+          85.0,
+          75.0,
+          65.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "elder_titan": {
+    "display_name": "Elder Titan",
+    "abilities": [
+      {
+        "name": "elder_titan_echo_stomp",
+        "display_name": "Echo Stomp",
+        "cooldowns": [
+          14.0,
+          13.0,
+          12.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "elder_titan_ancestral_spirit",
+        "display_name": "Astral Spirit",
+        "cooldowns": [
+          23.0,
+          21.0,
+          19.0,
+          17.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "elder_titan_earth_splitter",
+        "display_name": "Earth Splitter",
+        "cooldowns": [
+          100.0,
+          95.0,
+          90.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "legion_commander": {
+    "display_name": "Legion Commander",
+    "abilities": [
+      {
+        "name": "legion_commander_overwhelming_odds",
+        "display_name": "Overwhelming Odds",
+        "cooldowns": [
+          18.0,
+          18.0,
+          18.0,
+          18.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "legion_commander_press_the_attack",
+        "display_name": "Press The Attack",
+        "cooldowns": [
+          16.0,
+          15.0,
+          14.0,
+          13.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "legion_commander_moment_of_courage",
+        "display_name": "Moment of Courage",
+        "cooldowns": [
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "legion_commander_duel",
+        "display_name": "Duel",
+        "cooldowns": [
+          60.0,
+          55.0,
+          50.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "techies": {
+    "display_name": "Techies",
+    "abilities": [
+      {
+        "name": "techies_sticky_bomb",
+        "display_name": "Sticky Bomb",
+        "cooldowns": [
+          16.0,
+          13.0,
+          10.0,
+          7.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "techies_reactive_tazer",
+        "display_name": "Reactive Tazer",
+        "cooldowns": [
+          26.0,
+          22.0,
+          18.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "techies_suicide",
+        "display_name": "Blast Off!",
+        "cooldowns": [
+          40.0,
+          35.0,
+          30.0,
+          25.0
+        ],
+        "max_level": 4
+      }
+    ]
+  },
+  "ember_spirit": {
+    "display_name": "Ember Spirit",
+    "abilities": [
+      {
+        "name": "ember_spirit_searing_chains",
+        "display_name": "Searing Chains",
+        "cooldowns": [
+          13.0,
+          12.0,
+          11.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "ember_spirit_sleight_of_fist",
+        "display_name": "Sleight of Fist",
+        "cooldowns": [
+          13.0,
+          11.0,
+          9.0,
+          7.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "ember_spirit_flame_guard",
+        "display_name": "Flame Guard",
+        "cooldowns": [
+          32.0,
+          32.0,
+          32.0,
+          32.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "ember_spirit_fire_remnant",
+        "display_name": "Fire Remnant",
+        "cooldowns": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "earth_spirit": {
+    "display_name": "Earth Spirit",
+    "abilities": [
+      {
+        "name": "earth_spirit_boulder_smash",
+        "display_name": "Boulder Smash",
+        "cooldowns": [
+          20.0,
+          17.0,
+          14.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "earth_spirit_rolling_boulder",
+        "display_name": "Rolling Boulder",
+        "cooldowns": [
+          16.0,
+          12.0,
+          8.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "earth_spirit_geomagnetic_grip",
+        "display_name": "Geomagnetic Grip",
+        "cooldowns": [
+          13.0,
+          13.0,
+          13.0,
+          13.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "earth_spirit_magnetize",
+        "display_name": "Magnetize",
+        "cooldowns": [
+          100.0,
+          90.0,
+          80.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "abyssal_underlord": {
+    "display_name": "Underlord",
+    "abilities": [
+      {
+        "name": "abyssal_underlord_firestorm",
+        "display_name": "Firestorm",
+        "cooldowns": [
+          16.0,
+          15.0,
+          14.0,
+          13.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "abyssal_underlord_pit_of_malice",
+        "display_name": "Pit of Malice",
+        "cooldowns": [
+          30.0,
+          25.0,
+          20.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "abyssal_underlord_dark_portal",
+        "display_name": "Fiend's Gate",
+        "cooldowns": [
+          110.0,
+          105.0,
+          100.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "terrorblade": {
+    "display_name": "Terrorblade",
+    "abilities": [
+      {
+        "name": "terrorblade_reflection",
+        "display_name": "Reflection",
+        "cooldowns": [
+          23.0,
+          20.0,
+          17.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "terrorblade_conjure_image",
+        "display_name": "Conjure Image",
+        "cooldowns": [
+          16.0,
+          16.0,
+          16.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "terrorblade_metamorphosis",
+        "display_name": "Metamorphosis",
+        "cooldowns": [
+          145.0,
+          140.0,
+          135.0,
+          130.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "terrorblade_terror_wave",
+        "display_name": "Terror Wave",
+        "cooldowns": [
+          90.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "terrorblade_sunder",
+        "display_name": "Sunder",
+        "cooldowns": [
+          110.0,
+          75.0,
+          40.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "phoenix": {
+    "display_name": "Phoenix",
+    "abilities": [
+      {
+        "name": "phoenix_icarus_dive",
+        "display_name": "Icarus Dive",
+        "cooldowns": [
+          40.0,
+          35.0,
+          30.0,
+          25.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "phoenix_fire_spirits",
+        "display_name": "Fire Spirits",
+        "cooldowns": [
+          50.0,
+          40.0,
+          30.0,
+          20.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "phoenix_sun_ray",
+        "display_name": "Sun Ray",
+        "cooldowns": [
+          30.0,
+          30.0,
+          30.0,
+          30.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "phoenix_supernova",
+        "display_name": "Supernova",
+        "cooldowns": [
+          120.0,
+          120.0,
+          120.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "oracle": {
+    "display_name": "Oracle",
+    "abilities": [
+      {
+        "name": "oracle_fortunes_end",
+        "display_name": "Fortune's End",
+        "cooldowns": [
+          18.0,
+          14.0,
+          10.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "oracle_fates_edict",
+        "display_name": "Fate's Edict",
+        "cooldowns": [
+          17.0,
+          14.0,
+          11.0,
+          8.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "oracle_purifying_flames",
+        "display_name": "Purifying Flames",
+        "cooldowns": [
+          2.5,
+          2.5,
+          2.5,
+          2.5
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "oracle_rain_of_destiny",
+        "display_name": "Rain of Destiny",
+        "cooldowns": [
+          40.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "oracle_false_promise",
+        "display_name": "False Promise",
+        "cooldowns": [
+          110.0,
+          85.0,
+          60.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "winter_wyvern": {
+    "display_name": "Winter Wyvern",
+    "abilities": [
+      {
+        "name": "winter_wyvern_arctic_burn",
+        "display_name": "Arctic Burn",
+        "cooldowns": [
+          26.0,
+          24.0,
+          22.0,
+          20.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "winter_wyvern_splinter_blast",
+        "display_name": "Splinter Blast",
+        "cooldowns": [
+          6.0,
+          6.0,
+          6.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "winter_wyvern_cold_embrace",
+        "display_name": "Cold Embrace",
+        "cooldowns": [
+          24.0,
+          21.0,
+          18.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "winter_wyvern_winters_curse",
+        "display_name": "Winter's Curse",
+        "cooldowns": [
+          100.0,
+          90.0,
+          80.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "arc_warden": {
+    "display_name": "Arc Warden",
+    "abilities": [
+      {
+        "name": "arc_warden_flux",
+        "display_name": "Flux",
+        "cooldowns": [
+          16.0,
+          16.0,
+          16.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "arc_warden_magnetic_field",
+        "display_name": "Magnetic Field",
+        "cooldowns": [
+          20.0,
+          19.0,
+          18.0,
+          17.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "arc_warden_spark_wraith",
+        "display_name": "Spark Wraith",
+        "cooldowns": [
+          4.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "arc_warden_tempest_double",
+        "display_name": "Tempest Double",
+        "cooldowns": [
+          60.0,
+          55.0,
+          50.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "monkey_king": {
+    "display_name": "Monkey King",
+    "abilities": [
+      {
+        "name": "monkey_king_boundless_strike",
+        "display_name": "Boundless Strike",
+        "cooldowns": [
+          24.0,
+          21.0,
+          18.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "monkey_king_tree_dance",
+        "display_name": "Tree Dance",
+        "cooldowns": [
+          0.9,
+          0.6,
+          0.3,
+          0.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "monkey_king_primal_spring",
+        "display_name": "Primal Spring",
+        "cooldowns": [
+          18.0,
+          16.0,
+          14.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "monkey_king_mischief",
+        "display_name": "Mischief",
+        "cooldowns": [
+          24.5
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "monkey_king_wukongs_command",
+        "display_name": "Wukong's Command",
+        "cooldowns": [
+          100.0,
+          90.0,
+          80.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "dark_willow": {
+    "display_name": "Dark Willow",
+    "abilities": [
+      {
+        "name": "dark_willow_bramble_maze",
+        "display_name": "Bramble Maze",
+        "cooldowns": [
+          22.0,
+          22.0,
+          22.0,
+          22.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "dark_willow_shadow_realm",
+        "display_name": "Shadow Realm",
+        "cooldowns": [
+          21.0,
+          19.0,
+          17.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "dark_willow_cursed_crown",
+        "display_name": "Cursed Crown",
+        "cooldowns": [
+          17.0,
+          15.0,
+          13.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "dark_willow_bedlam",
+        "display_name": "Bedlam",
+        "cooldowns": [
+          30.0,
+          30.0,
+          30.0
+        ],
+        "max_level": 3
+      },
+      {
+        "name": "dark_willow_terrorize",
+        "display_name": "Terrorize",
+        "cooldowns": [
+          100.0,
+          90.0,
+          80.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "pangolier": {
+    "display_name": "Pangolier",
+    "abilities": [
+      {
+        "name": "pangolier_swashbuckle",
+        "display_name": "Swashbuckle",
+        "cooldowns": [
+          19.0,
+          16.0,
+          13.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "pangolier_shield_crash",
+        "display_name": "Shield Crash",
+        "cooldowns": [
+          15.0,
+          12.0,
+          9.0,
+          6.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "pangolier_gyroshell",
+        "display_name": "Rolling Thunder",
+        "cooldowns": [
+          90.0,
+          85.0,
+          80.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "grimstroke": {
+    "display_name": "Grimstroke",
+    "abilities": [
+      {
+        "name": "grimstroke_dark_artistry",
+        "display_name": "Stroke of Fate",
+        "cooldowns": [
+          11.0,
+          9.0,
+          7.0,
+          5.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "grimstroke_ink_creature",
+        "display_name": "Phantom's Embrace",
+        "cooldowns": [
+          30.0,
+          26.0,
+          22.0,
+          18.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "grimstroke_spirit_walk",
+        "display_name": "Ink Swell",
+        "cooldowns": [
+          27.0,
+          24.0,
+          21.0,
+          18.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "grimstroke_soul_chain",
+        "display_name": "Soulbind",
+        "cooldowns": [
+          70.0,
+          65.0,
+          60.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "hoodwink": {
+    "display_name": "Hoodwink",
+    "abilities": [
+      {
+        "name": "hoodwink_acorn_shot",
+        "display_name": "Acorn Shot",
+        "cooldowns": [
+          16.0,
+          14.0,
+          12.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "hoodwink_bushwhack",
+        "display_name": "Bushwhack",
+        "cooldowns": [
+          15.0,
+          14.0,
+          13.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "hoodwink_sharpshooter",
+        "display_name": "Sharpshooter",
+        "cooldowns": [
+          45.0,
+          45.0,
+          45.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "void_spirit": {
+    "display_name": "Void Spirit",
+    "abilities": [
+      {
+        "name": "void_spirit_aether_remnant",
+        "display_name": "Aether Remnant",
+        "cooldowns": [
+          17.0,
+          15.0,
+          13.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "void_spirit_dissimilate",
+        "display_name": "Dissimilate",
+        "cooldowns": [
+          20.0,
+          17.0,
+          14.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "void_spirit_resonant_pulse",
+        "display_name": "Resonant Pulse",
+        "cooldowns": [
+          18.0,
+          18.0,
+          18.0,
+          18.0
+        ],
+        "max_level": 4
+      }
+    ]
+  },
+  "snapfire": {
+    "display_name": "Snapfire",
+    "abilities": [
+      {
+        "name": "snapfire_scatterblast",
+        "display_name": "Scatterblast",
+        "cooldowns": [
+          18.0,
+          15.0,
+          12.0,
+          9.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "snapfire_firesnap_cookie",
+        "display_name": "Firesnap Cookie",
+        "cooldowns": [
+          18.0,
+          17.0,
+          16.0,
+          15.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "snapfire_lil_shredder",
+        "display_name": "Lil' Shredder",
+        "cooldowns": [
+          24.0,
+          20.0,
+          16.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "snapfire_mortimer_kisses",
+        "display_name": "Mortimer Kisses",
+        "cooldowns": [
+          120.0,
+          110.0,
+          100.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "mars": {
+    "display_name": "Mars",
+    "abilities": [
+      {
+        "name": "mars_spear",
+        "display_name": "Spear of Mars",
+        "cooldowns": [
+          14.0,
+          13.0,
+          12.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "mars_gods_rebuke",
+        "display_name": "God's Rebuke",
+        "cooldowns": [
+          16.0,
+          14.0,
+          12.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "mars_arena_of_blood",
+        "display_name": "Arena Of Blood",
+        "cooldowns": [
+          100.0,
+          95.0,
+          90.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "ringmaster": {
+    "display_name": "Ringmaster",
+    "abilities": [
+      {
+        "name": "ringmaster_tame_the_beasts",
+        "display_name": "Tame the Beasts",
+        "cooldowns": [
+          16.0,
+          14.0,
+          12.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "ringmaster_the_box",
+        "display_name": "Escape Act",
+        "cooldowns": [
+          38.0,
+          32.0,
+          26.0,
+          20.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "ringmaster_impalement",
+        "display_name": "Impalement Arts",
+        "cooldowns": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "ringmaster_spotlight",
+        "display_name": "Spotlight",
+        "cooldowns": [
+          30.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "ringmaster_wheel",
+        "display_name": "Wheel of Wonder",
+        "cooldowns": [
+          90.0,
+          80.0,
+          70.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "dawnbreaker": {
+    "display_name": "Dawnbreaker",
+    "abilities": [
+      {
+        "name": "dawnbreaker_fire_wreath",
+        "display_name": "Starbreaker",
+        "cooldowns": [
+          17.0,
+          15.0,
+          13.0,
+          11.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "dawnbreaker_celestial_hammer",
+        "display_name": "Celestial Hammer",
+        "cooldowns": [
+          18.0,
+          16.0,
+          14.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "dawnbreaker_solar_guardian",
+        "display_name": "Solar Guardian",
+        "cooldowns": [
+          110.0,
+          100.0,
+          90.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "marci": {
+    "display_name": "Marci",
+    "abilities": [
+      {
+        "name": "marci_grapple",
+        "display_name": "Dispose",
+        "cooldowns": [
+          16.0,
+          14.0,
+          12.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "marci_companion_run",
+        "display_name": "Rebound",
+        "cooldowns": [
+          24.0,
+          20.0,
+          16.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "marci_bodyguard",
+        "display_name": "Bodyguard",
+        "cooldowns": [
+          20.0,
+          20.0,
+          20.0,
+          20.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "marci_special_delivery",
+        "display_name": "Special Delivery",
+        "cooldowns": [
+          245.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "marci_unleash",
+        "display_name": "Unleash",
+        "cooldowns": [
+          80.0,
+          70.0,
+          60.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "primal_beast": {
+    "display_name": "Primal Beast",
+    "abilities": [
+      {
+        "name": "primal_beast_onslaught",
+        "display_name": "Onslaught",
+        "cooldowns": [
+          25.0,
+          22.0,
+          19.0,
+          16.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "primal_beast_trample",
+        "display_name": "Trample",
+        "cooldowns": [
+          30.0,
+          27.0,
+          24.0,
+          21.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "primal_beast_pulverize",
+        "display_name": "Pulverize",
+        "cooldowns": [
+          40.0,
+          35.0,
+          30.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "muerta": {
+    "display_name": "Muerta",
+    "abilities": [
+      {
+        "name": "muerta_dead_shot",
+        "display_name": "Dead Shot",
+        "cooldowns": [
+          16.0,
+          14.0,
+          12.0,
+          10.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "muerta_the_calling",
+        "display_name": "The Calling",
+        "cooldowns": [
+          30.0,
+          30.0,
+          30.0,
+          30.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "muerta_spectral_slug",
+        "display_name": "Spectral Slug",
+        "cooldowns": [
+          12.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "muerta_pierce_the_veil",
+        "display_name": "Pierce the Veil",
+        "cooldowns": [
+          75.0,
+          60.0,
+          45.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "kez": {
+    "display_name": "Kez",
+    "abilities": [
+      {
+        "name": "kez_echo_slash",
+        "display_name": "Echo Slash",
+        "cooldowns": [
+          21.0,
+          18.0,
+          15.0,
+          12.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "kez_grappling_claw",
+        "display_name": "Grappling Claw",
+        "cooldowns": [
+          13.0,
+          11.0,
+          9.0,
+          7.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "kez_kazurai_katana",
+        "display_name": "Kazurai Katana",
+        "cooldowns": [
+          20.0,
+          15.0,
+          10.0,
+          5.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "kez_switch_weapons",
+        "display_name": "Switch Discipline",
+        "cooldowns": [
+          8.0
+        ],
+        "max_level": 1
+      },
+      {
+        "name": "kez_raptor_dance",
+        "display_name": "Raptor Dance",
+        "cooldowns": [
+          40.0,
+          35.0,
+          30.0
+        ],
+        "max_level": 3
+      }
+    ]
+  },
+  "largo": {
+    "display_name": "Largo",
+    "abilities": [
+      {
+        "name": "largo_catchy_lick",
+        "display_name": "Catchy Lick",
+        "cooldowns": [
+          13.0,
+          11.0,
+          9.0,
+          7.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "largo_frogstomp",
+        "display_name": "Frogstomp",
+        "cooldowns": [
+          20.0,
+          18.0,
+          16.0,
+          14.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "largo_croak_of_genius",
+        "display_name": "Croak of Genius",
+        "cooldowns": [
+          25.0,
+          25.0,
+          25.0,
+          25.0
+        ],
+        "max_level": 4
+      },
+      {
+        "name": "largo_amphibian_rhapsody",
+        "display_name": "Amphibian Rhapsody",
+        "cooldowns": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "max_level": 3
+      }
+    ]
+  }
+}
