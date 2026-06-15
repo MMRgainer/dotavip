@@ -97,17 +97,26 @@ _NAMES_CLEAN = {re.sub(r"[^A-Z]", "", hn.upper()): key for hn, key in _NAMES.ite
 
 def _match_name(raw: str) -> tuple[Optional[str], float]:
     clean = re.sub(r"[^A-Z]", "", raw.upper())
-    if len(clean) < 4:                      # too little text to trust
+    if len(clean) < 3:                      # too little text to trust
         return None, 0.0
     best, best_r = None, 0.0
     for hn, key in _NAMES_CLEAN.items():
-        # full containment (OCR may add junk around the name)
-        if hn in clean:
-            return key, 1.0
+        # Substring containment counts only for hero names of 3+ letters.
+        # Two-letter names like "IO" (Wisp) appear inside many longer names and
+        # OCR misreads (e.g. WARLOCK misread as WARIOCK contains "IO"), so they
+        # must NOT win by containment — only by near-exact similarity below.
+        if len(hn) >= 3 and hn in clean:
+            cover = len(hn) / len(clean)        # how much of the text the name fills
+            if cover >= 0.6:
+                return key, 1.0                 # name dominates the text → confident
+            cand = 0.6 + 0.3 * cover            # short name inside longer text → likely, not certain
+            if cand > best_r:
+                best_r, best = cand, key
+            continue
         r = difflib.SequenceMatcher(None, hn, clean).ratio()
         if r > best_r:
             best_r, best = r, key
-    return (best if best_r >= 0.6 else None), best_r
+    return (best if best_r >= 0.62 else None), best_r
 
 
 def _binarizations(crop: np.ndarray):

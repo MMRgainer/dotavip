@@ -119,7 +119,7 @@ function AbilityPopup({ heroKey, slot, onStartTimer, onClose }) {
 
   useEffect(() => {
     if (!heroKey || abilities.length) return;
-    fetch(`/api/heroes/${heroKey}/abilities`)
+    fetch(`http://127.0.0.1:8765/heroes/${heroKey}/abilities`)
       .then(r => r.json())
       .then(d => { if (d.abilities) setAbilities(heroKey, d.abilities); })
       .catch(() => {});
@@ -200,7 +200,7 @@ function HeroCard({ slot, heroKey }) {
   // Pre-fetch abilities when hero is set
   useEffect(() => {
     if (!heroKey || abilityMap[heroKey]) return;
-    fetch(`/api/heroes/${heroKey}/abilities`)
+    fetch(`http://127.0.0.1:8765/heroes/${heroKey}/abilities`)
       .then(r => r.json())
       .then(d => { if (d.abilities) setAbilities(heroKey, d.abilities); })
       .catch(() => {});

@@ -20,8 +20,9 @@ export function useWebSocket() {
 
     ws.onopen = () => {
       setConnected(true);
-      // Fetch hero list once on connect
-      fetch('/api/heroes')
+      // Fetch hero list once on connect. Absolute URL: the packaged overlay
+      // runs from file:// where the dev '/api' proxy doesn't exist.
+      fetch('http://127.0.0.1:8765/heroes')
         .then(r => r.json())
         .then(d => { if (d.heroes) setHeroList(d.heroes); })
         .catch(() => {});

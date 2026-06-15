@@ -54,6 +54,7 @@ const STEP_WHAT = ['c_level1','c_rad_first','c_rad_last','c_dire_first','c_dire_
 // Round (i) badge — shows a fullscreen screenshot while hovered.
 function InfoImg({ src }) {
   const [show, setShow] = useState(false);
+  const [err, setErr] = useState(false);
   return (
     <>
       <span onMouseEnter={()=>setShow(true)} onMouseLeave={()=>setShow(false)}
@@ -63,8 +64,14 @@ function InfoImg({ src }) {
       {show && (
         <div style={{ position:'fixed', inset:0, zIndex:200, background:'rgba(2,6,23,.93)',
           display:'flex', alignItems:'center', justifyContent:'center', padding:24, pointerEvents:'none' }}>
-          <img src={src} style={{ maxWidth:'96%', maxHeight:'96%', objectFit:'contain', borderRadius:8,
-            boxShadow:'0 12px 64px rgba(0,0,0,.85)', border:'1px solid #334155' }} />
+          {err ? (
+            <div style={{ color:'#64748b', fontSize:15, border:'1px dashed #334155', borderRadius:10,
+              padding:'28px 40px', background:'#0a0f1a' }}>📷 Скріншот буде додано пізніше</div>
+          ) : (
+            <img src={src} onError={() => setErr(true)}
+              style={{ maxWidth:'96%', maxHeight:'96%', objectFit:'contain', borderRadius:8,
+                boxShadow:'0 12px 64px rgba(0,0,0,.85)', border:'1px solid #334155' }} />
+          )}
         </div>
       )}
     </>
@@ -246,8 +253,9 @@ function CalibrationModal({ calibrated, reload, onClose }) {
           <div style={colTitle}>{t('guide_title')}</div>
           {gstep(1, t('calib_g1'), pub('guide/guide_img1.png'))}
           {gstep(2, t('calib_g2'), pub('guide/guide_img2.png'))}
-          {gstep(3, t('calib_g3'), pub('guide/guide_img3.png'))}
-          {gstep(4, t('calib_g4'), null)}
+          {gstep(3, t('calib_g_display'), pub('guide/guide_borderless.png'))}
+          {gstep(4, t('calib_g3'), pub('guide/guide_img3.png'))}
+          {gstep(5, t('calib_g4'), null)}
         </div>
 
         {/* divider — app accent colour */}
