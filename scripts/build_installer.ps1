@@ -67,6 +67,13 @@ if ($Publish) {
     if (-not $env:GH_TOKEN) { throw "Set `$env:GH_TOKEN before publishing" }
     Write-Host "  Publishing to GitHub Releases..." -ForegroundColor Yellow
     & npx electron-builder --win nsis --publish always
+    # Publish all draft releases created by electron-builder
+    $headers = @{Authorization="token $env:GH_TOKEN"; "Content-Type"="application/json"}
+    $releases = Invoke-RestMethod "https://api.github.com/repos/DanyloIT/dotavip/releases" -Headers $headers
+    foreach ($rel in ($releases | Where-Object { $_.draft -eq $true })) {
+        Invoke-RestMethod "https://api.github.com/repos/DanyloIT/dotavip/releases/$($rel.id)" -Method Patch -Headers $headers -Body '{"draft":false,"make_latest":"true"}' | Out-Null
+        Write-Host "  Released: $($rel.tag_name)" -ForegroundColor Green
+    }
 } else {
     & npx electron-builder --win nsis --publish never
 }
