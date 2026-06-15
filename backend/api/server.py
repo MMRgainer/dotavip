@@ -363,17 +363,37 @@ def calibrate_get(width: int, height: int):
 async def calibrate_post(request: Request):
     from tracker import calibration
     body = await request.json()
+    clicks = {
+        "level_first":   body["level_first"],
+        "radiant_first": body["radiant_first"],
+        "radiant_last":  body["radiant_last"],
+        "dire_first":    body["dire_first"],
+        "dire_last":     body["dire_last"],
+    }
     calib = calibration.build_from_clicks(
         width         = int(body["width"]),
         height        = int(body["height"]),
-        level_first   = body["level_first"],
-        radiant_first = body["radiant_first"],
-        radiant_last  = body["radiant_last"],
-        dire_first    = body["dire_first"],
-        dire_last     = body["dire_last"],
+        **clicks,
     )
     calibration.save_calibration(calib)
+    # Save screenshot + clicks so the UI can show a persistent preview
+    if body.get("image"):
+        calibration.save_snapshot(body["image"], int(body["width"]), int(body["height"]), clicks)
     return {"status": "ok", "calibration": calib}
+
+@app.get("/calibrate/snapshot")
+def calibrate_snapshot():
+    from tracker import calibration
+    snap = calibration.load_snapshot()
+    if snap is None:
+        return {"snapshot": None}
+    # Return without the full image to keep it fast; image comes separately
+    return {"snapshot": {
+        "width":  snap["width"],
+        "height": snap["height"],
+        "clicks": snap["clicks"],
+        "image":  snap["image"],   # base64 PNG
+    }}
 
 @app.get("/debug")
 def debug():

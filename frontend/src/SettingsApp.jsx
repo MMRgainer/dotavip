@@ -72,6 +72,55 @@ function InfoImg({ src }) {
   );
 }
 
+// Renders the saved calibration snapshot: screenshot + 5 numbered dots.
+function CalibrationSnapshot({ snapshot }) {
+  const t = useT();
+  if (!snapshot) return null;
+  const { image, width, height, clicks } = snapshot;
+  const LABELS  = ['1','2','3','4','5'];
+  const COLORS  = ['#38bdf8','#22c55e','#f59e0b','#f472b6','#a78bfa'];
+  const KEYS    = ['level_first','radiant_first','radiant_last','dire_first','dire_last'];
+  const NAMES   = ['c_level1','c_rad_first','c_rad_last','c_dire_first','c_dire_last'];
+
+  return (
+    <div style={{ marginTop: 24 }}>
+      <div style={{ fontSize: 12, fontWeight: 700, color: '#64748b', letterSpacing: '.07em',
+        textAlign: 'center', marginBottom: 10 }}>{t('calib_preview_title') || 'ЗБЕРЕЖЕНІ ТОЧКИ КАЛІБРУВАННЯ'}</div>
+      <div style={{ position: 'relative', display: 'inline-block', width: '100%' }}>
+        <img src={`data:image/png;base64,${image}`}
+          style={{ width: '100%', display: 'block', borderRadius: 6, border: '1px solid #1e293b' }} />
+        {KEYS.map((key, i) => {
+          const pt = clicks[key];
+          if (!pt) return null;
+          // Convert original pixel coords to percentage for responsive layout
+          const left = `${(pt.x / width * 100).toFixed(2)}%`;
+          const top  = `${(pt.y / height * 100).toFixed(2)}%`;
+          return (
+            <div key={key} title={t(NAMES[i]) || NAMES[i]} style={{
+              position: 'absolute', left, top,
+              transform: 'translate(-50%, -50%)',
+              width: 22, height: 22, borderRadius: '50%',
+              background: COLORS[i], color: '#06121f',
+              fontWeight: 900, fontSize: 12,
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              boxShadow: `0 0 0 2px #0b0f17, 0 0 8px ${COLORS[i]}88`,
+              pointerEvents: 'none', userSelect: 'none',
+            }}>{LABELS[i]}</div>
+          );
+        })}
+      </div>
+      <div style={{ marginTop: 8, display: 'flex', flexWrap: 'wrap', gap: '6px 14px', justifyContent: 'center' }}>
+        {KEYS.map((key, i) => (
+          <span key={key} style={{ fontSize: 11.5, color: '#94a3b8', display: 'flex', alignItems: 'center', gap: 5 }}>
+            <span style={{ width: 12, height: 12, borderRadius: '50%', background: COLORS[i], display: 'inline-block', flexShrink: 0 }} />
+            {LABELS[i]} — {t(NAMES[i]) || NAMES[i]}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function CalibrationModal({ calibrated, reload, onClose }) {
   const t = useT();
   const [phase, setPhase] = useState('idle');
@@ -80,7 +129,16 @@ function CalibrationModal({ calibrated, reload, onClose }) {
   const [clicks, setClicks] = useState({});
   const [stepIdx, setStepIdx] = useState(0);
   const [msg, setMsg] = useState('');
+  const [snapshot, setSnapshot] = useState(null);
   const imgRef = useRef();
+
+  // Load saved snapshot on open
+  useEffect(() => {
+    fetch(`${API}/calibrate/snapshot`)
+      .then(r => r.json())
+      .then(d => { if (d.snapshot) setSnapshot(d.snapshot); })
+      .catch(() => {});
+  }, []);
 
   // "Зробити заново" wipes the saved calibration — confirm first.
   const handleStart = () => {
@@ -109,10 +167,15 @@ function CalibrationModal({ calibrated, reload, onClose }) {
   const save = async (c) => {
     setPhase('saving');
     try {
+      // Strip the "data:image/png;base64," prefix before sending
+      const imageB64 = img.data.replace(/^data:image\/png;base64,/, '');
       await fetch(`${API}/calibrate`, { method:'POST', headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({ width:img.width, height:img.height,
+        body: JSON.stringify({ width:img.width, height:img.height, image: imageB64,
           level_first:c.level_first, radiant_first:c.radiant_first, radiant_last:c.radiant_last,
           dire_first:c.dire_first, dire_last:c.dire_last }) });
+      // Build snapshot locally so it shows immediately without an extra fetch
+      const newSnap = { image: imageB64, width: img.width, height: img.height, clicks: c };
+      setSnapshot(newSnap);
       setPhase('done'); setMsg(t('calib_saved')); reload();
     } catch { setPhase('error'); setMsg(t('save_fail')); }
   };
@@ -166,6 +229,11 @@ function CalibrationModal({ calibrated, reload, onClose }) {
           {phase==='saving' && <div style={{color:ACCENT, textAlign:'center', marginTop:14}}>{t('saving')}</div>}
           {phase==='done'  && <div style={{color:'#22c55e', textAlign:'center', marginTop:14}}>✓ {msg} <button onClick={start} style={{...btn, marginLeft:10}}>{t('try_again')}</button></div>}
           {phase==='error' && <div style={{color:'#ef4444', textAlign:'center', marginTop:14}}>{msg} <button onClick={start} style={{...btn, marginLeft:10}}>{t('try_again')}</button></div>}
+
+          {/* Persistent preview — shown whenever we have a saved snapshot and are NOT mid-calibration */}
+          {snapshot && phase !== 'clicking' && phase !== 'counting' && (
+            <CalibrationSnapshot snapshot={snapshot} />
+          )}
         </div>
       </div>
     </div>

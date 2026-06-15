@@ -48,7 +48,10 @@ if (-not (Test-Path "$wcsFinal\windows-10")) {
     if (-not (Test-Path $arc)) { Invoke-WebRequest $url -OutFile $arc -UseBasicParsing }
     $tmp = "$wcs\_extract_tmp"
     Remove-Item $tmp -Recurse -Force -ErrorAction SilentlyContinue
-    & $z x -snld -bd $arc "-o$tmp" -y 2>&1 | Out-Null
+    # Temporarily allow non-terminating errors so 7za symlink warnings don't stop the script
+    $prev = $ErrorActionPreference; $ErrorActionPreference = "Continue"
+    & $z x -snld -bd $arc "-o$tmp" -y | Out-Null
+    $ErrorActionPreference = $prev
     Remove-Item "$tmp\darwin" -Recurse -Force -ErrorAction SilentlyContinue
     Remove-Item $wcsFinal -Recurse -Force -ErrorAction SilentlyContinue
     Move-Item $tmp $wcsFinal -Force

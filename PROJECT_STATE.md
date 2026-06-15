@@ -276,6 +276,7 @@ powershell -ExecutionPolicy Bypass -File C:\Projects\DotaVIP\scripts\build_insta
 - ✅ Заморозка таймерів на паузі (`usePauseFreeze`, поле `paused`).
 - ✅ Фінальний перепак інсталятора з усіма фічами (текст, БКБ, click-to-close, гайд-вікно тощо).
 - ✅ Авто-оновлення (electron-updater, GitHub Releases, defer install until Dota closed, UI у ⚙).
+- ✅ Превью калібрування: після успішного калібрування в правій панелі CalibrationModal зберігається і постійно показується скрін з 5 пронумерованими кольоровими точками. Backend зберігає у `backend/assets/calibration_snapshot.json` (GET `/calibrate/snapshot`). Frontend: компонент `CalibrationSnapshot` у SettingsApp.jsx.
 
 ## Важливі нюанси / уроки
 - Користувач: грає 2560×1440, **Borderless**, монітор 1 (primary), команда буває і Radiant, і Dire.

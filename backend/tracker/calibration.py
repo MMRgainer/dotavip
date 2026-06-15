@@ -21,7 +21,8 @@ import numpy as np
 
 from capture.screen import ScreenCapture
 
-_CALIB_PATH = Path(__file__).parent.parent / "assets" / "scoreboard_calibration.json"
+_CALIB_PATH    = Path(__file__).parent.parent / "assets" / "scoreboard_calibration.json"
+_SNAPSHOT_PATH = Path(__file__).parent.parent / "assets" / "calibration_snapshot.json"
 
 
 # ── capture ──────────────────────────────────────────────────────────────────
@@ -55,6 +56,20 @@ def _save_all(data: dict) -> None:
 
 def get_calibration(width: int, height: int) -> Optional[dict]:
     return _load_all().get(f"{width}x{height}")
+
+def save_snapshot(image_b64: str, width: int, height: int, clicks: dict) -> None:
+    """Persist the calibration screenshot + click positions for the UI preview."""
+    payload = {"image": image_b64, "width": width, "height": height, "clicks": clicks}
+    _SNAPSHOT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    _SNAPSHOT_PATH.write_text(json.dumps(payload), encoding="utf-8")
+
+def load_snapshot() -> Optional[dict]:
+    if not _SNAPSHOT_PATH.exists():
+        return None
+    try:
+        return json.loads(_SNAPSHOT_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return None
 
 def save_calibration(calib: dict) -> None:
     """calib must contain width, height, level_x, portrait_x, portrait_w,
