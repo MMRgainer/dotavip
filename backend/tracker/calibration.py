@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import base64
 import json
+import os
 from pathlib import Path
 from typing import Optional
 
@@ -24,12 +25,17 @@ from capture.screen import ScreenCapture
 import sys
 
 def _assets_dir() -> Path:
-    """Persistent assets directory that survives app restarts in both dev and
-    PyInstaller (onedir) mode. In frozen mode __file__ is inside _MEIPASS which
-    IS the permanent onedir folder, so writes there persist just like in dev."""
+    """Directory for USER-created calibration data (calibration JSON + preview
+    snapshot). It must survive app updates, so in a frozen build we do NOT write
+    next to the exe — the installer replaces resources/ on every update and that
+    wiped the calibration. Instead use a stable per-user location that mirrors
+    Electron's userData: %APPDATA%/DotaVIP/assets. In dev we keep the repo's
+    backend/assets folder."""
     if getattr(sys, "frozen", False):
-        # PyInstaller onedir: exe sits in the dist folder; assets/ is a sibling
-        return Path(sys.executable).parent / "assets"
+        base = os.environ.get("APPDATA") or os.path.expanduser("~")
+        d = Path(base) / "DotaVIP" / "assets"
+        d.mkdir(parents=True, exist_ok=True)
+        return d
     return Path(__file__).parent.parent / "assets"
 
 _CALIB_PATH    = _assets_dir() / "scoreboard_calibration.json"

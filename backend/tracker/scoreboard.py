@@ -97,14 +97,23 @@ _NAMES_CLEAN = {re.sub(r"[^A-Z]", "", hn.upper()): key for hn, key in _NAMES.ite
 
 def _match_name(raw: str) -> tuple[Optional[str], float]:
     clean = re.sub(r"[^A-Z]", "", raw.upper())
-    if len(clean) < 3:                      # too little text to trust
+    if len(clean) < 2:                      # nothing usable
+        return None, 0.0
+    # Exact full-string match first. This is the ONLY way a very short hero name
+    # like "IO" (Wisp) can match: the WHOLE recognised text must equal "IO".
+    # That auto-detects Io when its two letters are read cleanly, while never
+    # letting "IO" sneak in as a substring of a longer word / OCR misread.
+    exact = _NAMES_CLEAN.get(clean)
+    if exact:
+        return exact, 1.0
+    if len(clean) < 3:                      # 2-char text that isn't an exact hero → don't guess
         return None, 0.0
     best, best_r = None, 0.0
     for hn, key in _NAMES_CLEAN.items():
         # Substring containment counts only for hero names of 3+ letters.
-        # Two-letter names like "IO" (Wisp) appear inside many longer names and
-        # OCR misreads (e.g. WARLOCK misread as WARIOCK contains "IO"), so they
-        # must NOT win by containment — only by near-exact similarity below.
+        # Two-letter names like "IO" appear inside many longer names and OCR
+        # misreads (e.g. WARLOCK misread as WARIOCK contains "IO"), so they must
+        # NOT win by containment — only by the exact match handled above.
         if len(hn) >= 3 and hn in clean:
             cover = len(hn) / len(clean)        # how much of the text the name fills
             if cover >= 0.6:
