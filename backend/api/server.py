@@ -603,6 +603,13 @@ def _build_state() -> dict:
     while len(buyback) < 5:
         buyback.append(False)
 
+    # GSI freshness: Dota stops sending GSI the moment you leave a match (back to
+    # the main menu). Without this check the last in_game=True would stick and
+    # the overlay would keep showing in the menu. Treat stale GSI as "not in a
+    # game" so the overlay hides shortly after the match ends / you leave.
+    gsi_fresh = bool(_last_gsi_ts) and (time.monotonic() - _last_gsi_ts) < 12
+    in_game = g.in_game and gsi_fresh
+
     return {
         "type": "state",
         "data": {
@@ -611,7 +618,7 @@ def _build_state() -> dict:
             "draft":     enemy_heroes,
             "game_time":  g.game_time,
             "clock_time": g.clock_time,
-            "in_game":    g.in_game,
+            "in_game":    in_game,
             "paused":     g.paused,
             "game_state": g.game_state,
             "game_over":  g.game_over,

@@ -12,6 +12,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useOverlayStore } from '../store/overlayStore';
+import { playChime } from '../overlay/chime';
 import { useT } from '../i18n';
 
 const LOTUS_TIMES  = [180, 360, 540, 720];                       // 3,6,9,12 min
@@ -20,30 +21,6 @@ const LEAD = 15;                                                 // warn 15s bef
 
 function remEnabled() { try { return localStorage.getItem('rem_enabled') !== '0'; } catch { return true; } }
 function remVolume()  { try { const v = parseFloat(localStorage.getItem('rem_volume')); return isNaN(v) ? 0.5 : v; } catch { return 0.5; } }
-
-// ── short chime via Web Audio (no asset file needed) ─────────────────────────
-let _ctx = null;
-function playChime(vol) {
-  if (vol <= 0) return;
-  try {
-    _ctx = _ctx || new (window.AudioContext || window.webkitAudioContext)();
-    const ctx = _ctx;
-    if (ctx.state === 'suspended') ctx.resume();
-    const now = ctx.currentTime;
-    [880, 1320].forEach((freq, i) => {
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = 'sine';
-      osc.frequency.value = freq;
-      const t0 = now + i * 0.16;
-      gain.gain.setValueAtTime(0, t0);
-      gain.gain.linearRampToValueAtTime(0.25 * vol, t0 + 0.02);
-      gain.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.22);
-      osc.connect(gain).connect(ctx.destination);
-      osc.start(t0); osc.stop(t0 + 0.24);
-    });
-  } catch { /* audio unavailable — stay silent */ }
-}
 
 function LotusIcon({ size = 50 }) {
   return (
@@ -77,35 +54,38 @@ function WisdomIcon({ size = 50 }) {
 
 export default function SpawnReminders() {
   const t = useT();
-  const gameTime = useOverlayStore(s => s.gameTime);
-  const inGame   = useOverlayStore(s => s.inGame);
+  // Use the in-game CLOCK (0:00 at the horn), NOT game_time — game_time also
+  // counts the ~90s pre-game prep, which made lotus fire ~1.5 min too early.
+  // Lotus at clock 3/6/9/12 min, Wisdom every 7 min; reminder 15s before.
+  const clockTime = useOverlayStore(s => s.clockTime);
+  const inGame    = useOverlayStore(s => s.inGame);
   const firedRef = useRef(new Set());
   const lastGtRef = useRef(0);
   const [active, setActive] = useState(null);   // { type, untilMs }
   const [, tick] = useState(0);
 
-  // New game (game_time jumped back) → forget what we already announced.
+  // New game (clock jumped back) → forget what we already announced.
   useEffect(() => {
-    if (gameTime < lastGtRef.current - 5) firedRef.current = new Set();
-    lastGtRef.current = gameTime;
-  }, [gameTime]);
+    if (clockTime < lastGtRef.current - 5) firedRef.current = new Set();
+    lastGtRef.current = clockTime;
+  }, [clockTime]);
 
-  // Fire when game_time crosses (spawn − 15s).
+  // Fire when the clock crosses (spawn − 15s).
   useEffect(() => {
     if (!inGame || !remEnabled()) return;
     const check = (T, type) => {
       const key = `${type}:${T}`;
       if (firedRef.current.has(key)) return;
-      if (gameTime >= T - LEAD && gameTime < T) {
+      if (clockTime >= T - LEAD && clockTime < T) {
         firedRef.current.add(key);
-        const remaining = Math.max(1, T - gameTime);
+        const remaining = Math.max(1, T - clockTime);
         setActive({ type, untilMs: Date.now() + remaining * 1000 });
         playChime(remVolume());
       }
     };
     LOTUS_TIMES.forEach(T => check(T, 'lotus'));
     WISDOM_TIMES.forEach(T => check(T, 'wisdom'));
-  }, [gameTime, inGame]);
+  }, [clockTime, inGame]);
 
   // Count down then auto-hide.
   useEffect(() => {

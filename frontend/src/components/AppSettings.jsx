@@ -3,8 +3,9 @@
  * window). Rendered as a modal overlay. First setting: Windows autostart.
  */
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useT } from '../i18n';
+import { playChime } from '../overlay/chime';
 import LangSwitcher from './LangSwitcher';
 
 function Toggle({ on, onChange, disabled }) {
@@ -55,8 +56,19 @@ export default function AppSettings({ onClose }) {
   const [remOn,  setRemOn]  = useState(() => { try { return localStorage.getItem('rem_enabled') !== '0'; } catch { return true; } });
   const [remVol, setRemVol] = useState(() => { try { const v = parseFloat(localStorage.getItem('rem_volume')); return isNaN(v) ? 0.5 : v; } catch { return 0.5; } });
 
+  const lastChimeRef = useRef(0);
   const setRemindersOn = (v) => { setRemOn(v); try { localStorage.setItem('rem_enabled', v ? '1' : '0'); } catch {} };
-  const setRemindersVol = (v) => { setRemVol(v); try { localStorage.setItem('rem_volume', String(v)); } catch {} };
+  const setRemindersVol = (v) => {
+    setRemVol(v);
+    try { localStorage.setItem('rem_volume', String(v)); } catch {}
+    // Live preview: play the chime at the chosen volume while dragging
+    // (throttled so it isn't a machine-gun of overlapping beeps).
+    const now = Date.now();
+    if (v > 0 && now - lastChimeRef.current > 220) {
+      lastChimeRef.current = now;
+      playChime(v);
+    }
+  };
 
   useEffect(() => {
     if (!api?.getAutostart) return;
