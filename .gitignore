@@ -20,6 +20,9 @@ DotaVIP.exe
 # ── User data / calibration (per-machine, not for git) ───────────────────────
 backend/assets/scoreboard_calibration.json
 
+# ── Internal local-only notes (roadmap / security) ──────────────────────────
+PROJECT_STATE.md
+
 # ── Secrets — never commit these ──────────────────────────────────────────────
 .env
 .env.*

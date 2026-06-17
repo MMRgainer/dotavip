@@ -195,11 +195,12 @@ export default function AppSettings({ onClose }) {
                 {installing ? '…' : (t('update_install_btn') || 'Встановити')}
               </button>
             : updateStatus === 'up-to-date'
-              ? <button disabled style={{
+              ? <button onClick={handleCheckNow} disabled={checking} style={{
                   background: 'transparent', color: '#22c55e', border: '1px solid #22c55e',
                   borderRadius: 8, padding: '8px 14px', fontSize: 12.5, fontWeight: 700,
-                  cursor: 'default', whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', gap: 5 }}>
-                  <span>✓</span> {t('update_uptodate') || 'Актуальна'}
+                  cursor: checking ? 'default' : 'pointer', whiteSpace: 'nowrap',
+                  display: 'inline-flex', alignItems: 'center', gap: 5, opacity: checking ? .6 : 1 }}>
+                  {checking ? '…' : <><span>✓</span> {t('update_uptodate') || 'Актуальна'}</>}
                 </button>
               : <button
                   onClick={handleCheckNow}

@@ -268,6 +268,34 @@
       color: var(--muted);
     }
     footer a { color: var(--muted); text-decoration: underline; }
+
+    /* ── Download / install-help modal ── */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 100;
+      background: rgba(2,6,23,.78); backdrop-filter: blur(4px);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-overlay.show { display: flex; }
+    .modal-card {
+      max-width: 460px; width: 100%;
+      background: #111827; border: 1px solid var(--border); border-radius: 16px;
+      padding: 26px 26px 22px; box-shadow: 0 24px 80px rgba(0,0,0,.6);
+    }
+    .modal-card h3 { margin: 0 0 14px; font-size: 20px; color: #e2e8f0; }
+    .modal-card p { margin: 0 0 12px; font-size: 14px; line-height: 1.6; color: var(--muted); }
+    .modal-card .modal-step {
+      background: rgba(56,189,248,.08); border: 1px solid rgba(56,189,248,.3);
+      border-radius: 10px; padding: 12px 14px; color: #e2e8f0; font-weight: 600;
+    }
+    .modal-card .modal-verify {
+      display: inline-block; margin: 4px 0 18px; color: #38bdf8;
+      text-decoration: none; font-size: 13.5px; font-weight: 600;
+    }
+    .modal-card .modal-verify:hover { text-decoration: underline; }
+    .modal-card .modal-close {
+      width: 100%; padding: 12px; border: none; border-radius: 10px;
+      background: var(--accent, #2563eb); color: #fff; font-size: 15px; font-weight: 700; cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -390,6 +418,18 @@
     </p>
   </footer>
 
+  <!-- Download / install-help modal -->
+  <div class="modal-overlay" id="dl-modal">
+    <div class="modal-card">
+      <h3 data-t="modal_title"></h3>
+      <p data-t="modal_lead"></p>
+      <p class="modal-step" data-t="modal_step"></p>
+      <a class="modal-verify" id="modal-verify-link" href="https://github.com/DanyloIT/dotavip" target="_blank" data-t="modal_verify"></a>
+      <p data-t="modal_safe"></p>
+      <button class="modal-close" id="dl-modal-close" data-t="modal_close"></button>
+    </div>
+  </div>
+
   <script>
     const T = {
       ua: {
@@ -427,6 +467,12 @@
         cta_title:   'Готовий спробувати?',
         cta_desc:    'Безкоштовно. Без реєстрації. Встановлюється за хвилину.',
         footer_note: 'Не пов\'язано з Valve або Dota 2',
+        modal_title: 'Завантаження почалося ✓',
+        modal_lead:  'Під час встановлення Windows може показати синє вікно «Захист Windows захистив ваш ПК». Це нормально для нових додатків без дорогого сертифіката — це не означає, що додаток небезпечний.',
+        modal_step:  'Щоб встановити: натисніть «Докладніше» → «Виконати в будь-якому разі».',
+        modal_safe:  'DotaVIP не змінює гру, не чіти й не збирає ваші дані. Увесь код відкритий — будь-хто може перевірити його на GitHub.',
+        modal_verify:'🔍 Переглянути код на GitHub',
+        modal_close: 'Зрозуміло',
       },
 
       ru: {
@@ -464,6 +510,12 @@
         cta_title:   'Готов попробовать?',
         cta_desc:    'Бесплатно. Без регистрации. Устанавливается за минуту.',
         footer_note: 'Не связано с Valve или Dota 2',
+        modal_title: 'Загрузка началась ✓',
+        modal_lead:  'Во время установки Windows может показать синее окно «Система Windows защитила ваш компьютер». Это нормально для новых приложений без дорогого сертификата — это не значит, что приложение опасно.',
+        modal_step:  'Чтобы установить: нажмите «Подробнее» → «Выполнить в любом случае».',
+        modal_safe:  'DotaVIP не меняет игру, не читы и не собирает ваши данные. Весь код открыт — любой может проверить его на GitHub.',
+        modal_verify:'🔍 Посмотреть код на GitHub',
+        modal_close: 'Понятно',
       },
 
       en: {
@@ -501,6 +553,12 @@
         cta_title:   'Ready to try?',
         cta_desc:    'Free. No sign-up. Installs in a minute.',
         footer_note: 'Not affiliated with Valve or Dota 2',
+        modal_title: 'Download started ✓',
+        modal_lead:  'During install, Windows may show a blue “Windows protected your PC” dialog. That is normal for new apps without an expensive certificate — it does not mean the app is unsafe.',
+        modal_step:  'To install: click “More info” → “Run anyway”.',
+        modal_safe:  'DotaVIP does not modify the game, is not a cheat and collects none of your data. The full source is open — anyone can review it on GitHub.',
+        modal_verify:'🔍 View the code on GitHub',
+        modal_close: 'Got it',
       },
     };
 
@@ -538,6 +596,18 @@
         }
       } catch {}
     }
+
+    // Show the install-help modal after a download click (download still
+    // proceeds via the anchor href; we don't preventDefault).
+    const dlModal = document.getElementById('dl-modal');
+    function openDlModal() { dlModal.classList.add('show'); }
+    function closeDlModal() { dlModal.classList.remove('show'); }
+    ['dl-btn', 'dl-btn2'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener('click', () => setTimeout(openDlModal, 400));
+    });
+    document.getElementById('dl-modal-close').addEventListener('click', closeDlModal);
+    dlModal.addEventListener('click', e => { if (e.target === dlModal) closeDlModal(); });
 
     render();
     updateDownloadLink();

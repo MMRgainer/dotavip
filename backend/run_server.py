@@ -10,7 +10,10 @@ if getattr(sys, "frozen", False):
     # crashes silently. Redirect the missing streams to a log file: this both
     # prevents the crash and gives us a backend log for diagnostics.
     try:
-        _log_dir = os.path.join(os.path.dirname(sys.executable), "assets")
+        # Write the log to a per-user, always-writable location (the install dir
+        # may be Program Files, which is read-only for non-admins).
+        _base = os.environ.get("APPDATA") or os.path.expanduser("~")
+        _log_dir = os.path.join(_base, "DotaVIP", "assets")
         os.makedirs(_log_dir, exist_ok=True)
         _logf = open(os.path.join(_log_dir, "backend.log"), "a",
                      buffering=1, encoding="utf-8", errors="replace")

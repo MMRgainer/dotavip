@@ -13,6 +13,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useOverlayStore } from '../store/overlayStore';
 import { playChime } from '../overlay/chime';
+import { pub } from '../pub';
 import { useT } from '../i18n';
 
 const LOTUS_TIMES  = [180, 360, 540, 720];                       // 3,6,9,12 min
@@ -23,33 +24,13 @@ function remEnabled() { try { return localStorage.getItem('rem_enabled') !== '0'
 function remVolume()  { try { const v = parseFloat(localStorage.getItem('rem_volume')); return isNaN(v) ? 0.5 : v; } catch { return 0.5; } }
 
 function LotusIcon({ size = 50 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
-      <g stroke="#be185d" strokeWidth="1.5">
-        <path d="M32 54c-14 0-24-7-24-7s4-12 24-12 24 12 24 12-10 7-24 7Z" fill="#f472b6" />
-        <path d="M32 50C22 50 16 40 16 30c8 2 12 10 16 20 4-10 8-18 16-20 0 10-6 20-16 20Z" fill="#ec4899" />
-        <path d="M32 50c-6 0-9-12-9-22 5 3 7 12 9 22 2-10 4-19 9-22 0 10-3 22-9 22Z" fill="#f9a8d4" />
-        <path d="M32 49c0-12 0-22 0-30 0 8 0 18 0 30Z" fill="#fce7f3" />
-      </g>
-    </svg>
-  );
+  return <img src={pub('reminders/lotus.svg')} alt="" width={size} height={size}
+    style={{ objectFit: 'contain' }} />;
 }
 
 function WisdomIcon({ size = 50 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
-      <circle cx="32" cy="32" r="22" fill="#1e3a8a" stroke="#38bdf8" strokeWidth="2" />
-      <circle cx="32" cy="32" r="22" fill="url(#wg)" opacity="0.5" />
-      <defs>
-        <radialGradient id="wg" cx="50%" cy="40%" r="60%">
-          <stop offset="0%" stopColor="#7dd3fc" />
-          <stop offset="100%" stopColor="#1e3a8a" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-      <path d="M32 16l4 10 10 2-8 7 2 11-10-6-10 6 2-11-8-7 10-2z"
-        fill="#e0f2fe" stroke="#38bdf8" strokeWidth="1" />
-    </svg>
-  );
+  return <img src={pub('reminders/rune.png')} alt="" width={size} height={size}
+    style={{ objectFit: 'contain' }} />;
 }
 
 export default function SpawnReminders() {
