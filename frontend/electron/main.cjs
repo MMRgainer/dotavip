@@ -118,6 +118,29 @@ function isDotaRunning(cb) {
   );
 }
 
+// Before the NSIS updater replaces the install dir it must be able to DELETE
+// the old files. The PyInstaller onefile backend spawns a child process, so
+// killing only our spawned handle leaves a copy of dotavip-backend.exe running
+// and locking the file → "could not delete old application files". Kill the
+// whole backend tree by image name and the PowerShell focus monitor, wait for
+// Windows to release the handles, then run the install.
+function killHelpersThenInstall() {
+  try { if (focusProc) { focusProc.kill(); focusProc = null; } } catch {}
+  try { if (backendProc) { backendProc.kill(); } } catch {}
+  const finish = () => {
+    try {
+      const { autoUpdater } = require('electron-updater');
+      autoUpdater.quitAndInstall(true, true);
+    } catch (e) { console.error('quitAndInstall failed', e); }
+  };
+  try {
+    execFile('taskkill', ['/F', '/T', '/IM', 'dotavip-backend.exe'],
+      { windowsHide: true }, () => setTimeout(finish, 1500));
+  } catch {
+    setTimeout(finish, 1500);
+  }
+}
+
 function scheduleInstallWhenDotaClosed() {
   if (_dotaCheckInterval) return;
   _dotaCheckInterval = setInterval(() => {
@@ -125,8 +148,7 @@ function scheduleInstallWhenDotaClosed() {
       if (!running) {
         clearInterval(_dotaCheckInterval);
         _dotaCheckInterval = null;
-        const { autoUpdater } = require('electron-updater');
-        autoUpdater.quitAndInstall(true, true);
+        killHelpersThenInstall();
       }
     });
   }, 5 * 60 * 1000); // check every 5 min
@@ -153,7 +175,7 @@ function initAutoUpdater() {
         tray?.setToolTip('DotaVIP — оновлення готове (буде встановлено після закриття Dota)');
         scheduleInstallWhenDotaClosed();
       } else {
-        autoUpdater.quitAndInstall(true, true);
+        killHelpersThenInstall();
       }
     });
   });
@@ -172,9 +194,8 @@ ipcMain.handle('get-update-ready',  () => _updateReady);
 ipcMain.handle('get-update-status', () => _updateStatus);
 ipcMain.handle('install-update-now', () => {
   if (!_updateReady) return false;
-  const { autoUpdater } = require('electron-updater');
   clearInterval(_dotaCheckInterval); _dotaCheckInterval = null;
-  autoUpdater.quitAndInstall(true, true);
+  killHelpersThenInstall();
   return true;
 });
 

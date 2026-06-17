@@ -24,6 +24,7 @@ export const useOverlayStore = create((set, get) => ({
   // ── enemy heroes (5 slots) ────────────────────────────────────────────────
   enemyHeroes: ['', '', '', '', ''],
   enemyUltLevels: [0, 0, 0, 0, 0],   // from scoreboard OCR (0 = ult not yet available)
+  enemyLevels: [0, 0, 0, 0, 0],      // raw hero level from OCR (for skill-level overrides, e.g. Undying)
   // Slots the user assigned BY HAND (hero picker in the ULT menu). Locked from
   // the auto-parser (GSI draft / OCR hero) until the game ends; levels still
   // auto-apply. Reset when a new game starts.
@@ -31,11 +32,9 @@ export const useOverlayStore = create((set, get) => ({
 
   // Per-enemy CD modifiers (persist across popup open/close)
   // Octarine Core −25% — applies to ULT and BKB. (Arcane rune removed.)
-  // aghs — Aghanim's Scepter, only meaningful for heroes whose Aghs changes the
-  // ult cooldown (see overlay/aghanim.js).
   enemyMods: [
-    { octarine:false, aghs:false }, { octarine:false, aghs:false }, { octarine:false, aghs:false },
-    { octarine:false, aghs:false }, { octarine:false, aghs:false },
+    { octarine:false }, { octarine:false }, { octarine:false },
+    { octarine:false }, { octarine:false },
   ],
   toggleEnemyMod: (slot, key) => set(s => {
     const m = s.enemyMods.map((x, i) => i === slot ? { ...x, [key]: !x[key] } : x);
@@ -141,10 +140,11 @@ export const useOverlayStore = create((set, get) => ({
         set({
           enemyHeroes:    ['', '', '', '', ''],
           enemyUltLevels: [0, 0, 0, 0, 0],
+          enemyLevels:    [0, 0, 0, 0, 0],
           manualSlots:    [false, false, false, false, false],
           enemyMods: [
-            { octarine:false, aghs:false }, { octarine:false, aghs:false }, { octarine:false, aghs:false },
-            { octarine:false, aghs:false }, { octarine:false, aghs:false },
+            { octarine:false }, { octarine:false }, { octarine:false },
+            { octarine:false }, { octarine:false },
           ],
           enemyOpts: [
             { ult:true, bkb:false }, { ult:true, bkb:false }, { ult:true, bkb:false },
@@ -197,15 +197,18 @@ export const useOverlayStore = create((set, get) => ({
     if (Array.isArray(sb) && sb.length) {
       const heroes = [...next];
       const ults = [...get().enemyUltLevels];
+      const lvls = [...get().enemyLevels];
       for (const e of sb) {
         if (e.slot == null) continue;
         // OCR-detected hero wins — unless the user set this slot by hand
         if (e.hero && !manual[e.slot]) heroes[e.slot] = e.hero;
         // levels ALWAYS apply, even on manually locked slots
         if (e.ult_level != null) ults[e.slot] = e.ult_level;
+        if (e.level != null) lvls[e.slot] = e.level;
       }
       patch.enemyHeroes = heroes;
       patch.enemyUltLevels = ults;
+      patch.enemyLevels = lvls;
     }
 
     // ── Auto-detect Roshan / Aegis from GSI sequence counters ───────────────

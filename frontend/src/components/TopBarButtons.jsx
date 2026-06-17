@@ -10,7 +10,7 @@ import { useOverlayStore } from '../store/overlayStore';
 import { useMouseThrough } from '../hooks/useMouseThrough';
 import { useDraggable } from '../hooks/useDraggable';
 import { enemyHeroSlotsX, topbarButtonGeometry } from '../overlay/measurements';
-import { aghsChangesUlt, aghsUltCooldown } from '../overlay/aghanim';
+import { overrideAbility, overrideLevel, ULT_OVERRIDE } from '../overlay/abilityOverride';
 import { useT } from '../i18n';
 import { pub } from '../pub';
 import UltPopup from './UltPopup';
@@ -65,9 +65,6 @@ function SlotOptions({ slot, heroKey, onChangeHero }) {
   const t = useT();
   const opts      = useOverlayStore(s => s.enemyOpts[slot]);
   const toggleOpt = useOverlayStore(s => s.toggleEnemyOpt);
-  const mods      = useOverlayStore(s => s.enemyMods[slot]);
-  const toggleMod = useOverlayStore(s => s.toggleEnemyMod);
-  const hasAghs   = aghsChangesUlt(heroKey);
 
   const pill = (on, label, color, onClick, tip) => (
     <button onClick={onClick} title={tip} style={{
@@ -91,8 +88,6 @@ function SlotOptions({ slot, heroKey, onChangeHero }) {
       <div style={{ display:'flex', gap:6 }}>
         {pill(opts.ult, t('ult'), '#7c3aed', () => toggleOpt(slot, 'ult'), t('tip_opt_ult'))}
         {pill(opts.bkb, t('bkb'), '#0891b2', () => toggleOpt(slot, 'bkb'), t('tip_opt_bkb'))}
-        {/* Aghanim — only for heroes whose Scepter changes the ult cooldown */}
-        {hasAghs && pill(mods.aghs, t('aghs'), '#eab308', () => toggleMod(slot, 'aghs'), t('tip_opt_aghs'))}
       </div>
     </div>
   );
@@ -115,6 +110,7 @@ function HeroButtons({ slot, heroKey, cx, geo, buyY, ultY, dragProps }) {
   const setAbilities  = useOverlayStore(s => s.setAbilities);
   const setEnemyHeroManual = useOverlayStore(s => s.setEnemyHeroManual);
   const autoUltLevel  = useOverlayStore(s => s.enemyUltLevels[slot]) || 0;
+  const heroLevel     = useOverlayStore(s => s.enemyLevels[slot]) || 0;
   const mods          = useOverlayStore(s => s.enemyMods[slot]);
   const opts          = useOverlayStore(s => s.enemyOpts[slot]);
   const autoUlt       = useOverlayStore(s => s.autoUlt);
@@ -123,12 +119,21 @@ function HeroButtons({ slot, heroKey, cx, geo, buyY, ultY, dragProps }) {
 
   const abilities = heroKey ? (abilityMap[heroKey] || []) : [];
 
-  // Item 2: hide the ult button by default for heroes whose ult cooldown is
+  // The ability tracked by the "ult" button. For most heroes that's the real
+  // ult (last active ability with a cooldown); a few heroes override it with a
+  // basic skill (e.g. Undying → Tombstone) via abilityOverride.js.
+  const trackedAbility = () => {
+    const ov = overrideAbility(heroKey, abilities);
+    if (ov) return ov;
+    const active = abilities.filter(a => !a.passive && (a.cooldowns?.length ?? 0) > 0);
+    return active[active.length - 1] || null;
+  };
+
+  // Item 2: hide the ult button by default for heroes whose tracked cooldown is
   // < 30s (it's not worth tracking). The user can still enable it by hand in
   // the dropdown (that locks the slot via ultTouched so we never re-hide it).
   useEffect(() => {
-    const active = abilities.filter(a => !a.passive && (a.cooldowns?.length ?? 0) > 0);
-    const ab = active[active.length - 1];
+    const ab = trackedAbility();
     if (!ab) return;
     const baseCd = ab.cooldowns[0] ?? 99;
     autoUlt(slot, baseCd >= 30);
@@ -150,10 +155,7 @@ function HeroButtons({ slot, heroKey, cx, geo, buyY, ultY, dragProps }) {
     return () => document.removeEventListener('mousedown', h);
   }, [popup, closeMenu]);
 
-  const getUlt = () => {
-    const active = abilities.filter(a => !a.passive && (a.cooldowns?.length ?? 0) > 0);
-    return active[active.length - 1] || null;
-  };
+  const getUlt = () => trackedAbility();
 
   // Active timers for this slot
   const findTimer = (type) => {
@@ -187,12 +189,12 @@ function HeroButtons({ slot, heroKey, cx, geo, buyY, ultY, dragProps }) {
     const ab = getUlt();
     if (!ab) { openMenu(slot); return; }
     const maxLvl = ab.cooldowns?.length ?? 3;
-    const lvl = Math.min(maxLvl, autoUltLevel > 0 ? autoUltLevel : 1);
+    // Undying & co. track a basic skill whose level follows the hero level.
+    const ovLvl = overrideLevel(heroKey, heroLevel);
+    const lvl = ovLvl != null
+      ? Math.min(maxLvl, ovLvl)
+      : Math.min(maxLvl, autoUltLevel > 0 ? autoUltLevel : 1);
     let cd = ab.cooldowns?.[lvl - 1] ?? ab.cooldowns?.[0] ?? 100;
-    if (mods?.aghs) {                  // Aghanim's Scepter changes the ult CD
-      const a = aghsUltCooldown(heroKey, lvl);
-      if (a != null) cd = a;
-    }
     if (mods?.octarine) cd *= 0.75;   // Octarine Core -25%
     cd = Math.round(cd);
     startTimer({ type:'ult', slot, label: ab.display_name,
@@ -308,6 +310,7 @@ function HeroButtons({ slot, heroKey, cx, geo, buyY, ultY, dragProps }) {
               <SlotOptions slot={slot} heroKey={heroKey} onChangeHero={() => setPicking(true)} />
               {opts.ult && (getUlt() ? (
                 <UltPopup key={heroKey} heroKey={heroKey} ability={getUlt()} slot={slot}
+                  initialLevel={overrideLevel(heroKey, heroLevel)}
                   onStart={(tm) => { startTimer(tm); closeMenu(); }}
                   onClose={() => closeMenu()} />
               ) : (
